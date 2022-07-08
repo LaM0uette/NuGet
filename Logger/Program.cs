@@ -15,6 +15,15 @@
             Log,
         }
         
+        private static class PrefixLog
+        {
+            public const string Ok = "[== OK ==]";
+            public const string Nok = "[== NOK ==]";
+            public const string Err = "[== ERR ==]";
+            public const string Info = "[== INFO ==]";
+            public const string Crash = "[== CRASH ==]";
+        }
+        
         //
         // Constructor
         public Log(string dir = "", string log = "Log")
@@ -64,8 +73,8 @@
 
         public void Info(string msg, TypeLog typeLog = TypeLog.All)
         {
-            var msgFormat = $"[ -OK- ] {msg}";
-            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] {msgFormat}";
+            var msgFormat = $"{PrefixLog.Info} : {msg}";
+            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {msgFormat}";
             
             if (typeLog != TypeLog.Log) WriteLine(msgFormat);
             if (typeLog != TypeLog.Cmd) WriteLog(logFormat);
