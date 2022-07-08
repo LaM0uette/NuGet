@@ -64,8 +64,8 @@
 
         public void Info(string msg, TypeLog typeLog = TypeLog.All)
         {
-            var msgFormat = $" : {msg}";
-            var logFormat = $"{DateTime.Now.ToLongTimeString()} : {msgFormat}";
+            var msgFormat = $"[ -OK- ] {msg}";
+            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] {msgFormat}";
             
             if (typeLog != TypeLog.Log) WriteLine(msgFormat);
             if (typeLog != TypeLog.Cmd) WriteLog(logFormat);
