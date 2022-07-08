@@ -1,6 +1,6 @@
-﻿namespace Loger
+﻿namespace Logger
 {
-    public class Logger
+    public class Log
     {
         //
         // Variables
@@ -19,7 +19,7 @@
             return value.ToString("yyyy-MM-dd__HH-mm-ss");
         }
         
-        public Logger(string dir = "", string log = "")
+        public Log(string dir = "", string log = "")
         {
             var timeStamp = GetTimestamp(DateTime.Now);
             
@@ -31,7 +31,7 @@
         
         //
         // Loging
-        public void Log(string message)
+        public void Info(string message)
         {
             Console.WriteLine("Logged : {0}", message);
 

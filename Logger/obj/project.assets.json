@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Prog\\C#\\NuGet\\Loger\\Loger.csproj",
-      "projectName": "Loger",
-      "projectPath": "C:\\Prog\\C#\\NuGet\\Loger\\Loger.csproj",
+      "projectUniqueName": "C:\\Prog\\C#\\NuGet\\Logger\\Logger.csproj",
+      "projectName": "Logger",
+      "projectPath": "C:\\Prog\\C#\\NuGet\\Logger\\Logger.csproj",
       "packagesPath": "C:\\Users\\XD5965\\.nuget\\packages\\",
-      "outputPath": "C:\\Prog\\C#\\NuGet\\Loger\\obj\\",
+      "outputPath": "C:\\Prog\\C#\\NuGet\\Logger\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

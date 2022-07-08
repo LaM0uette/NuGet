@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UE1hI1ANzvdlrOVRtVB64UsZ91eNVrr/lU5OcLr/SvFRYoKYnvSWdntP1295Ze2FdFaKOYemXTznMAPZ+x1Ing==",
+  "dgSpecHash": "m7n2RRD79/5aaL6U9MWFeGrjgPejK4gKfcOIB0czaOo6/PTetNL6AquTTt5Be9WYBpxKG8KcTX8+4sE4gnxlEQ==",
   "success": true,
   "projectFilePath": "C:\\Prog\\C#\\NuGet\\__Main__\\__Main__.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\XD5965\\.nuget\\packages\\loger\\1.0.0\\loger.1.0.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

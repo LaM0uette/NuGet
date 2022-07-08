@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loger", "Loger\Loger.csproj", "{E8819D8F-4947-499B-B831-AD3BA2A9D067}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{E8819D8F-4947-499B-B831-AD3BA2A9D067}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "__Main__", "__Main__\__Main__.csproj", "{62B5D934-8B71-4AC2-8189-4839CD056249}"
 EndProject
