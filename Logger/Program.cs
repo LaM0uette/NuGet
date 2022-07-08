@@ -10,9 +10,9 @@
         // Class
         public enum TypeLog
         {
-            All = 0,
-            Cmd = 1,
-            Log = 2,
+            All,
+            Cmd,
+            Log,
         }
         
         //
