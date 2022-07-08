@@ -14,14 +14,9 @@
             Cmd = 1,
             Log = 2,
         }
-
+        
         //
-        // Functions
-        private static string GetTimestamp(DateTime value)
-        {
-            return value.ToString("yyyy-MM-dd__HH-mm-ss");
-        }
-
+        // Constructor
         public Log(string dir = "", string log = "Log")
         {
             var directory = dir == "" ? Directory.GetCurrentDirectory() : dir;
@@ -32,6 +27,18 @@
             FilePath = Path.Join(folderName ,fileName);
         }
 
+        //
+        // Functions
+        private static string GetTimestamp(DateTime value)
+        {
+            return value.ToString("yyyy-MM-dd__HH-mm-ss");
+        }
+
+        private static void WriteLine(string msg)
+        {
+            Console.WriteLine(msg);
+        }
+        
         private void WriteLog(string msg)
         {
             using var w = File.AppendText(FilePath);
@@ -57,14 +64,11 @@
 
         public void Info(string msg, TypeLog typeLog = TypeLog.All)
         {
-            if (typeLog != TypeLog.Log)
-            {
-                Console.WriteLine("Logged : {0}", msg);
-            }
-
-            var msgFormat = $"{DateTime.Now.ToLongTimeString()} {DateTime.Now.ToLongDateString()} : {msg}";
-
-            if (typeLog != TypeLog.Cmd) WriteLog(msgFormat);
+            var msgFormat = $" : {msg}";
+            var logFormat = $"{DateTime.Now.ToLongTimeString()} : {msgFormat}";
+            
+            if (typeLog != TypeLog.Log) WriteLine(msgFormat);
+            if (typeLog != TypeLog.Cmd) WriteLog(logFormat);
         }
     }
 }
