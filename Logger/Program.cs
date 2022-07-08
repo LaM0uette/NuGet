@@ -5,6 +5,11 @@ namespace Logger
 {
     public static class Test
     {
+        public static string SetRgb(this string input)
+        {
+            return input.Pastel(Color.FromArgb(255, 0, 0));
+        }
+        
         public static string Red(this string input)
         {
             return input.Pastel(Color.FromArgb(255, 0, 0));
