@@ -58,19 +58,6 @@
 
         //
         // Loging
-        public void Base(string msg)
-        {
-            Console.WriteLine("Logged : {0}", msg);
-
-            using (var w = File.AppendText(FilePath))
-            {
-                w.Write("\r\nLog Entry : ");
-                w.WriteLine("{0} {1}", DateTime.Now.ToLongTimeString(), DateTime.Now.ToLongDateString());
-                w.WriteLine("  :{0}", msg);
-                w.WriteLine("-----------------------------------------------");
-            }
-        }
-
         public void Info(string msg, TypeLog typeLog = TypeLog.All)
         {
             var msgFormat = $"{PrefixLog.Info} : {msg}";
