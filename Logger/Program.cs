@@ -1,10 +1,30 @@
-﻿namespace Logger
+﻿using System.Drawing;
+using Pastel;
+
+namespace Logger
 {
+    public static class Test
+    {
+        public static string Red(this string input)
+        {
+            return input.Pastel(Color.FromArgb(255, 0, 0));
+        }
+        
+        public static string Green(this string input)
+        {
+            return input.Pastel(Color.FromArgb(0, 255, 0));
+        }
+    }
+    
     public class Log
     {
         //
         // Variables
         private string FilePath { get; }
+        
+        //
+        // Colors
+        
 
         //
         // Class
@@ -60,7 +80,7 @@
         // Loging
         public void Info(string msg, TypeLog typeLog = TypeLog.All)
         {
-            var msgFormat = $"{PrefixLog.Info} : {msg}";
+            var msgFormat = $"{PrefixLog.Info} : {msg}".Green();
             var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {msgFormat}";
             
             if (typeLog != TypeLog.Log) WriteLine(msgFormat);

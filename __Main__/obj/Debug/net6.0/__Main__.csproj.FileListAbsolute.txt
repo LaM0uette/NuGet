@@ -16,3 +16,4 @@ C:\Prog\C#\NuGet\__Main__\obj\Debug\net6.0\__Main__.genruntimeconfig.cache
 C:\Prog\C#\NuGet\__Main__\obj\Debug\net6.0\ref\__Main__.dll
 C:\Prog\C#\NuGet\__Main__\bin\Debug\net6.0\Logger.dll
 C:\Prog\C#\NuGet\__Main__\bin\Debug\net6.0\Logger.pdb
+C:\Prog\C#\NuGet\__Main__\bin\Debug\net6.0\Pastel.dll

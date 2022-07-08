@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "6jscdZMq1TpqG9OBiS0whrnSzWym+U3NwehJTpxxRm0drkkJmyewnq6ZYk4CcSXf2rj4FSqspwdwiOjYprUhmA==",
+  "dgSpecHash": "zyQWTBGgAfSy3NmlAMcupiQiVYgHCjyd9rFMpyL3rCWSVOwh81nfyiISG3qYiAbLh53AgnZf0VwA8WfeMURIvQ==",
   "success": true,
   "projectFilePath": "C:\\Prog\\C#\\NuGet\\Logger\\Logger.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\XD5965\\.nuget\\packages\\pastel\\3.0.1\\pastel.3.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
