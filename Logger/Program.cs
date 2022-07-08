@@ -4,12 +4,6 @@
     {
         //
         // Variables
-        private string Directory { get; }
-
-        private string LogName { get; }
-
-        private string FileName { get; }
-
         private string FilePath { get; }
 
         //
@@ -28,23 +22,17 @@
             return value.ToString("yyyy-MM-dd__HH-mm-ss");
         }
 
-        public Log(string dir = "", string log = "")
+        public Log(string dir = "", string log = "Log")
         {
-            var timeStamp = GetTimestamp(DateTime.Now);
+            var directory = dir == "" ? Directory.GetCurrentDirectory() : dir;
+            var folderName = Path.Join(directory, "logs");
+            var fileName = log + $"_{GetTimestamp(DateTime.Now)}.log";
 
-            Directory = dir == "" ? System.IO.Directory.GetCurrentDirectory() : dir;
-            Directory = Path.Join(Directory, "logs");
-            
-            Console.WriteLine(Directory);
-            
-            LogName = log == "" ? LogName = "Log" : log;
-            FileName = LogName + $"_{timeStamp}.log";
-            FilePath = Path.Join(Directory, "logs" ,FileName);
-            
-            System.IO.Directory.CreateDirectory(FilePath);
+            Directory.CreateDirectory(folderName);
+            FilePath = Path.Join(folderName ,fileName);
         }
 
-        public void WriteLog(string msg)
+        private void WriteLog(string msg)
         {
             using var w = File.AppendText(FilePath);
             {
