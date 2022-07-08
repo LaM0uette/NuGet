@@ -33,9 +33,15 @@
             var timeStamp = GetTimestamp(DateTime.Now);
 
             Directory = dir == "" ? System.IO.Directory.GetCurrentDirectory() : dir;
+            Directory = Path.Join(Directory, "logs");
+            
+            Console.WriteLine(Directory);
+            
             LogName = log == "" ? LogName = "Log" : log;
             FileName = LogName + $"_{timeStamp}.log";
-            FilePath = Path.Join(Directory, FileName);
+            FilePath = Path.Join(Directory, "logs" ,FileName);
+            
+            System.IO.Directory.CreateDirectory(FilePath);
         }
 
         public void WriteLog(string msg)
