@@ -81,15 +81,16 @@ namespace Logger
 
         private void CheckTypeLog(string msgFormat = "", string logFormat = "", TypeLog typeLog = TypeLog.All, int mode = 0)
         {
-            if (mode == 0)
+            switch (mode)
             {
-                if (typeLog != TypeLog.Log) Console.WriteLine(msgFormat);
+                case 0:
+                    if (typeLog != TypeLog.Log) Console.WriteLine(msgFormat);
+                    break;
+                case 1:
+                    if (typeLog != TypeLog.Log) Console.Write(msgFormat);
+                    break;
             }
-            else
-            {
-                if (typeLog != TypeLog.Log) Console.Write(msgFormat);
-            }
-            
+
             if (typeLog != TypeLog.Cmd) WriteLog(logFormat);
         }
 
@@ -156,7 +157,7 @@ namespace Logger
         {
             var msgFormat = $"\r{$": {msg}".Blue()} {$"{v1}".Green()}{$"/".Blue()}{$"{v2}".Green()}";
 
-            CheckTypeLog(msgFormat, typeLog: typeLog);
+            CheckTypeLog(msgFormat, typeLog: typeLog, mode: 1);
         }
     }
 }
