@@ -16,6 +16,7 @@ namespace __Main__
             log.Val("Salut je suis une validation");
             log.Err("Salut je suis une erreur");
             log.Crash("Salut je suis un crash");
+            log.Void("Salut je suis un void");
 
             for (var i = 0; i < 100; i++)
             {

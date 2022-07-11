@@ -159,5 +159,12 @@ namespace Logger
 
             CheckTypeLog(msgFormat, typeLog: typeLog, mode: 1);
         }
+        
+        public void Void(string msg, TypeLog typeLog = TypeLog.All)
+        {
+            var msgFormat = $"{msg}".Green();
+
+            CheckTypeLog(msgFormat, msg, typeLog);
+        }
     }
 }
