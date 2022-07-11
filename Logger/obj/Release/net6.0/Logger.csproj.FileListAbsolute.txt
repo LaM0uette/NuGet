@@ -1,0 +1,12 @@
+C:\Prog\C#\NuGet\Logger\bin\Release\net6.0\Logger.deps.json
+C:\Prog\C#\NuGet\Logger\bin\Release\net6.0\Logger.dll
+C:\Prog\C#\NuGet\Logger\bin\Release\net6.0\Logger.pdb
+C:\Prog\C#\NuGet\Logger\obj\Release\net6.0\Logger.csproj.AssemblyReference.cache
+C:\Prog\C#\NuGet\Logger\obj\Release\net6.0\Logger.GeneratedMSBuildEditorConfig.editorconfig
+C:\Prog\C#\NuGet\Logger\obj\Release\net6.0\Logger.AssemblyInfoInputs.cache
+C:\Prog\C#\NuGet\Logger\obj\Release\net6.0\Logger.AssemblyInfo.cs
+C:\Prog\C#\NuGet\Logger\obj\Release\net6.0\Logger.csproj.CoreCompileInputs.cache
+C:\Prog\C#\NuGet\Logger\obj\Release\net6.0\Logger.dll
+C:\Prog\C#\NuGet\Logger\obj\Release\net6.0\refint\Logger.dll
+C:\Prog\C#\NuGet\Logger\obj\Release\net6.0\Logger.pdb
+C:\Prog\C#\NuGet\Logger\obj\Release\net6.0\ref\Logger.dll

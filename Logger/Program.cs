@@ -79,7 +79,7 @@ namespace Logger
         // Loging
         public void Info(string msg, TypeLog typeLog = TypeLog.All)
         {
-            var msgFormat = $"{$"{PrefixLog.Info}".Blue()} : {$"{msg}".Green()}";
+            var msgFormat = $"{$"{PrefixLog.Info}:".Blue()} {$"{msg}".Green()}";
             var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Info} : {msg}";
 
             if (typeLog != TypeLog.Log) WriteLine(msgFormat);

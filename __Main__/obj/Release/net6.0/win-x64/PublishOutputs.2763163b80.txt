@@ -1,0 +1,3 @@
+C:\Prog\C#\NuGet\__Main__\bin\Release\net6.0\win-x64\publish\__Main__.pdb
+C:\Prog\C#\NuGet\__Main__\bin\Release\net6.0\win-x64\publish\Logger.pdb
+C:\Prog\C#\NuGet\__Main__\bin\Release\net6.0\win-x64\publish\__Main__.exe

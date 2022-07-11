@@ -9,8 +9,8 @@ namespace __Main__
             var log = new Log();
             log.Info("test");
             log.Info("test bis");
-            
-            Thread.Sleep(5000000);
+
+            Console.ReadLine();
         }
     }
 }
