@@ -5,19 +5,20 @@ namespace Logger
 {
     public static class Test
     {
-        public static string SetRgb(this string input)
+        public static string SetRgb(this string input, int red, int green, int blue)
         {
-            return input.Pastel(Color.FromArgb(255, 0, 0));
+            return input.Pastel(Color.FromArgb(red, green, blue));
         }
         
+        //
         public static string Red(this string input)
         {
-            return input.Pastel(Color.FromArgb(255, 0, 0));
+            return input.SetRgb(255, 0, 0);
         }
         
         public static string Green(this string input)
         {
-            return input.Pastel(Color.FromArgb(0, 255, 0));
+            return input.SetRgb(0, 255, 0);
         }
     }
     
@@ -26,10 +27,6 @@ namespace Logger
         //
         // Variables
         private string FilePath { get; }
-        
-        //
-        // Colors
-        
 
         //
         // Class
