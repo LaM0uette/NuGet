@@ -20,22 +20,3 @@ namespace __Main__
         }
     }
 }
-
-/*
- static async Task Main()
-{    const string pgHost = "BORDEAUX04";
-    const string pgUser = "postgres";
-    const string pgPassword = "INEO_Infracom_33";
-    const string pgDatabase = "sig";
-    await using var conn = new NpgsqlConnection(@$"HOST={pgHost};Username={pgUser};Password={pgPassword};Database={pgDatabase}");
-    await conn.OpenAsync();
-    conn.Notification += (_, e) =>
-    {
-        Console.WriteLine("Received notification: " + e.Payload);
-    };
-    await using var cmd = new NpgsqlCommand("LISTEN datachange;", conn);
-    cmd.ExecuteNonQuery();
-    while (true) 
-        await conn.WaitAsync();
-}
-*/
