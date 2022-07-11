@@ -162,7 +162,33 @@ namespace Logger
         
         public void Void(string msg, TypeLog typeLog = TypeLog.All)
         {
+            CheckTypeLog(msg, msg, typeLog);
+        }
+        
+        public void VoidBlue(string msg, TypeLog typeLog = TypeLog.All)
+        {
+            var msgFormat = $"{msg}".Blue();
+
+            CheckTypeLog(msgFormat, msg, typeLog);
+        }
+        
+        public void VoidGreen(string msg, TypeLog typeLog = TypeLog.All)
+        {
             var msgFormat = $"{msg}".Green();
+
+            CheckTypeLog(msgFormat, msg, typeLog);
+        }
+        
+        public void VoidRed(string msg, TypeLog typeLog = TypeLog.All)
+        {
+            var msgFormat = $"{msg}".Red();
+
+            CheckTypeLog(msgFormat, msg, typeLog);
+        }
+        
+        public void VoidPink(string msg, TypeLog typeLog = TypeLog.All)
+        {
+            var msgFormat = $"{msg}".Pink();
 
             CheckTypeLog(msgFormat, msg, typeLog);
         }

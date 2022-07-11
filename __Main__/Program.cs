@@ -23,6 +23,10 @@ namespace __Main__
             log.Err("Salut je suis une erreur");
             log.Crash("Salut je suis un crash");
             log.Void("Salut je suis un void");
+            log.VoidBlue("Salut je suis un void blue");
+            log.VoidGreen("Salut je suis un void vert");
+            log.VoidRed("Salut je suis un void rouge");
+            log.VoidPink("Salut je suis un void rose");
 
             for (var i = 0; i < 100; i++)
             {
