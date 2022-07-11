@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using Logger;
+﻿using Logger;
 
 namespace __Main__
 {
@@ -7,10 +6,17 @@ namespace __Main__
     {
         public static void Main()
         {
+            TestLogger();
+        }
+
+        private static void TestLogger()
+        {
             var log = new Log();
             
             log.Ok("Salut je suis un ok");
+            log.Ok("Salut je suis un ok", Log.TypeLog.Cmd);
             log.Nok("Salut je suis un nok");
+            log.Nok("Salut je suis un nok", Log.TypeLog.Log);
             log.Info("Salut je suis un info");
             log.Param("Salut je suis un paramètre");
             log.Val("Salut je suis une validation");
