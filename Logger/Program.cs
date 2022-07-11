@@ -52,6 +52,8 @@ namespace Logger
             public const string Val = "[VAL]:";
             public const string Err = "[ERR]:";
             public const string Crash = "[CRA]:";
+            
+            public const string Sep = "■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■";
         }
 
         //
@@ -191,6 +193,14 @@ namespace Logger
             var msgFormat = $"{msg}".Pink();
 
             CheckTypeLog(msgFormat, msg, typeLog);
+        }
+        
+        public void Separator(string msg, TypeLog typeLog = TypeLog.All)
+        {
+            var msgFormat = $"\n\n{$"{PrefixLog.Sep}".Green()} {$"{msg}".Blue()} {$"{PrefixLog.Sep}".Green()}";
+            var logFormat = $"\n\n{PrefixLog.Sep} {msg} {PrefixLog.Sep}";
+
+            CheckTypeLog(msgFormat, logFormat, typeLog);
         }
     }
 }
