@@ -17,6 +17,7 @@ namespace Logger
 
         //
         public static string Blue(this string input) => input.SetRgb(108, 214, 245);
+        public static string Gray(this string input) => input.SetRgb(80, 80, 80);
         public static string Green(this string input) => input.SetRgb(44, 168, 65);
         public static string Red(this string input) => input.SetRgb(235, 66, 71);
         public static string Pink(this string input) => input.SetRgb(204, 57, 199);
@@ -197,7 +198,7 @@ namespace Logger
         
         public void Separator(string msg, TypeLog typeLog = TypeLog.All)
         {
-            var msgFormat = $"\n\n{$"{PrefixLog.Sep}".Green()} {$"{msg}".Blue()} {$"{PrefixLog.Sep}".Green()}";
+            var msgFormat = $"\n\n{$"{PrefixLog.Sep}".Gray()} {$"{msg}".Green()} {$"{PrefixLog.Sep}".Gray()}";
             var logFormat = $"\n\n{PrefixLog.Sep} {msg} {PrefixLog.Sep}";
 
             CheckTypeLog(msgFormat, logFormat, typeLog);
