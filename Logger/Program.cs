@@ -99,7 +99,7 @@ namespace Logger
         public void Ok(string msg, TypeLog typeLog = TypeLog.All)
         {
             var msgFormat = $"{$"{PrefixLog.Base} {PrefixLog.Ok}".Green()} {$"{msg}".Green()}";
-            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Ok} : {msg}";
+            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Ok} {msg}";
 
             CheckTypeLog(msgFormat, logFormat, typeLog);
         }
@@ -107,7 +107,7 @@ namespace Logger
         public void Nok(string msg, TypeLog typeLog = TypeLog.All)
         {
             var msgFormat = $"{$"{PrefixLog.Base} {PrefixLog.Nok}".Red()} {$"{msg}".Red()}";
-            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Nok} : {msg}";
+            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Nok} {msg}";
 
             CheckTypeLog(msgFormat, logFormat, typeLog);
         }
@@ -115,7 +115,7 @@ namespace Logger
         public void Info(string msg, TypeLog typeLog = TypeLog.All)
         {
             var msgFormat = $"{$"{PrefixLog.Base} {PrefixLog.Info}".Blue()} {msg.Blue()}";
-            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Info} : {msg}";
+            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Info} {msg}";
 
             CheckTypeLog(msgFormat, logFormat, typeLog);
         }
@@ -123,31 +123,31 @@ namespace Logger
         public void Param(string msg, TypeLog typeLog = TypeLog.All)
         {
             var msgFormat = $"{$"{PrefixLog.Base} {PrefixLog.Param}".Purple()} {$"{msg}".Purple()}";
-            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Param} : {msg}";
+            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Param} {msg}";
 
             CheckTypeLog(msgFormat, logFormat, typeLog);
         }
         
         public void Val(string msg, TypeLog typeLog = TypeLog.All)
         {
-            var msgFormat = $"{$"{PrefixLog.Base}".Green()} {$"{PrefixLog.Val[..5]}".BgGreen()}  {$"{msg}".Green()}";
-            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Val[..5]} : {msg}";
+            var msgFormat = $"{$"{PrefixLog.Base}".Green()} {$"{PrefixLog.Val[..5]}".BgGreen()}{$": {msg}".Green()}";
+            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Val} {msg}";
 
             CheckTypeLog(msgFormat, logFormat, typeLog);
         }
         
         public void Err(string msg, TypeLog typeLog = TypeLog.All)
         {
-            var msgFormat = $"{$"{PrefixLog.Base}".Red()} {$"{PrefixLog.Err[..5]}".BgRed()}  {$"{msg}".Red()}";
-            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Err[..5]} : {msg}";
+            var msgFormat = $"{$"{PrefixLog.Base}".Red()} {$"{PrefixLog.Err[..5]}".BgRed()}{$": {msg}".Red()}";
+            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Err} {msg}";
 
             CheckTypeLog(msgFormat, logFormat, typeLog);
         }
         
         public void Crash(string msg, TypeLog typeLog = TypeLog.All)
         {
-            var msgFormat = $"{$"{PrefixLog.Base}".Red()} {$"{PrefixLog.Crash[..5]}".BgRed()}  {$"{msg}".Red()}";
-            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Crash[..5]} : {msg}";
+            var msgFormat = $"{$"{PrefixLog.Base}".Red()} {$"{PrefixLog.Crash[..5]}".BgRed()}{$": {msg}".Red()}";
+            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Crash} {msg}";
 
             CheckTypeLog(msgFormat, logFormat, typeLog);
         }
