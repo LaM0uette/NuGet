@@ -155,7 +155,7 @@ namespace Logger
         //
         public void Progress(string msg, int v1, int v2, TypeLog typeLog = TypeLog.Cmd)
         {
-            var msgFormat = $"\r{$"{msg}".Blue()} {$"{v1}".Green()}{$"/".Blue()}{$"{v2}".Green()}";
+            var msgFormat = $"\r{$"{msg}".Blue()} {$"{v1}".Green()}{"/".Blue()}{$"{v2}".Green()}";
 
             CheckTypeLog(msgFormat, typeLog: typeLog, mode: 1);
         }
