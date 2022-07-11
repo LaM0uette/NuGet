@@ -9,6 +9,10 @@ namespace Logger
         {
             return input.Pastel(Color.FromArgb(red, green, blue));
         }
+        private static string SetRgbBg(this string input, int red, int green, int blue)
+        {
+            return input.PastelBg(Color.FromArgb(red, green, blue));
+        }
 
         //
         public static string Blue(this string input) => input.SetRgb(108, 214, 245);
@@ -17,6 +21,8 @@ namespace Logger
         public static string Pink(this string input) => input.SetRgb(235, 61, 125);
         public static string Purple(this string input) => input.SetRgb(186, 124, 230);
         public static string Yellow(this string input) => input.SetRgb(227, 224, 76);
+        
+        public static string WhiteYellow(this string input) => input.SetRgb(230, 230, 230).SetRgbBg(227, 224, 76);
     }
 
     public class Log
@@ -40,6 +46,7 @@ namespace Logger
             public const string Nok = "[== NOK ==]";
             public const string Err = "[== ERR ==]";
             public const string Info = "[== INFO ==]";
+            public const string Param = "[== PARAM ==]";
             public const string Crash = "[== CRASH ==]";
         }
 
@@ -74,16 +81,29 @@ namespace Logger
                 w.WriteLine(msg);
             }
         }
+        
+        private void CheckTypeLog(string msgFormat, string logFormat, TypeLog typeLog = TypeLog.All)
+        {
+            if (typeLog != TypeLog.Log) WriteLine(msgFormat);
+            if (typeLog != TypeLog.Cmd) WriteLog(logFormat);
+        }
 
         //
         // Loging
         public void Info(string msg, TypeLog typeLog = TypeLog.All)
         {
-            var msgFormat = $"{$"{PrefixLog.Info}:".Blue()} {$"{msg}".Green()}";
+            var msgFormat = $"{$"{PrefixLog.Info}".Blue()} {msg}";
             var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Info} : {msg}";
 
-            if (typeLog != TypeLog.Log) WriteLine(msgFormat);
-            if (typeLog != TypeLog.Cmd) WriteLog(logFormat);
+            CheckTypeLog(msgFormat, logFormat, typeLog);
+        }
+        
+        public void Param(string msg, TypeLog typeLog = TypeLog.All)
+        {
+            var msgFormat = $"{$"{PrefixLog.Param}".Yellow()} {$"{msg}".Yellow()}";
+            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Info} : {msg}";
+
+            CheckTypeLog(msgFormat, logFormat, typeLog);
         }
     }
 }

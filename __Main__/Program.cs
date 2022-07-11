@@ -7,8 +7,8 @@ namespace __Main__
         public static void Main()
         {
             var log = new Log();
-            log.Info("test");
-            log.Info("test bis");
+            log.Info("Salut je suis un info");
+            log.Param("Salut je suis un paramètre");
 
             Console.ReadLine();
         }
