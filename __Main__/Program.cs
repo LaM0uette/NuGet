@@ -7,10 +7,13 @@ namespace __Main__
         public static void Main()
         {
             var log = new Log();
-            log.Info("Salut je suis un ok");
-            log.Info("Salut je suis un nok");
+            log.Ok("Salut je suis un ok");
+            log.Nok("Salut je suis un nok");
             log.Info("Salut je suis un info");
             log.Param("Salut je suis un paramètre");
+            log.Val("Salut je suis une validation");
+            log.Err("Salut je suis une erreur");
+            log.Crash("Salut je suis un crash");
 
             Console.ReadLine();
         }
