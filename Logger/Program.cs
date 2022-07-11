@@ -22,7 +22,7 @@ namespace Logger
         public static string Purple(this string input) => input.SetRgb(186, 124, 230);
         public static string Yellow(this string input) => input.SetRgb(227, 224, 76);
         
-        public static string WhiteYellow(this string input) => input.SetRgb(230, 230, 230).SetRgbBg(227, 224, 76);
+        public static string BgYellow(this string input) => input.SetRgb(230, 230, 230).SetRgbBg(227, 224, 76);
     }
 
     public class Log
@@ -42,12 +42,12 @@ namespace Logger
 
         private static class PrefixLog
         {
-            public const string Ok = "[== OK ==]";
+            public const string Ok = "[== OK👍 ==]";
             public const string Nok = "[== NOK ==]";
             public const string Err = "[== ERR ==]";
-            public const string Info = "[== INFO ==]";
-            public const string Param = "[== PARAM ==]";
-            public const string Crash = "[== CRASH ==]";
+            public const string Info = "[== INF ==]";
+            public const string Param = "[== PRM ==]";
+            public const string Crash = "[== CRA ==]";
         }
 
         //
@@ -100,7 +100,7 @@ namespace Logger
         
         public void Param(string msg, TypeLog typeLog = TypeLog.All)
         {
-            var msgFormat = $"{$"{PrefixLog.Param}".Yellow()} {$"{msg}".Yellow()}";
+            var msgFormat = $"{$"{PrefixLog.Param}".BgYellow()} {$"{msg}".Yellow()}";
             var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Info} : {msg}";
 
             CheckTypeLog(msgFormat, logFormat, typeLog);
