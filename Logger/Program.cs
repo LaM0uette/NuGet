@@ -20,8 +20,6 @@ namespace Logger
         public static string Green(this string input) => input.SetRgb(76, 228, 126);
         public static string Red(this string input) => input.SetRgb(235, 66, 71);
         public static string Pink(this string input) => input.SetRgb(235, 61, 125);
-        public static string Purple(this string input) => input.SetRgb(186, 124, 230);
-        public static string Yellow(this string input) => input.SetRgb(227, 224, 76);
         
         public static string BgGreen(this string input) => input.SetRgb(240, 240, 240).SetRgbBg(76, 228, 126);
         public static string BgRed(this string input) => input.SetRgb(240, 240, 240).SetRgbBg(235, 66, 71);
@@ -75,22 +73,23 @@ namespace Logger
             return value.ToString("yyyy-MM-dd__HH-mm-ss");
         }
 
-        private static void WriteLine(string msg)
-        {
-            Console.WriteLine(msg);
-        }
-
         private void WriteLog(string msg)
         {
             using var w = File.AppendText(FilePath);
-            {
-                w.WriteLine(msg);
-            }
+            w.WriteLine(msg);
         }
 
-        private void CheckTypeLog(string msgFormat, string logFormat, TypeLog typeLog = TypeLog.All)
+        private void CheckTypeLog(string msgFormat, string logFormat, TypeLog typeLog = TypeLog.All, int mode = 0)
         {
-            if (typeLog != TypeLog.Log) WriteLine(msgFormat);
+            if (mode == 0)
+            {
+                if (typeLog != TypeLog.Log) Console.WriteLine(msgFormat);
+            }
+            else
+            {
+                if (typeLog != TypeLog.Log) Console.Write(msgFormat);
+            }
+            
             if (typeLog != TypeLog.Cmd) WriteLog(logFormat);
         }
 
@@ -122,7 +121,7 @@ namespace Logger
 
         public void Param(string msg, TypeLog typeLog = TypeLog.All)
         {
-            var msgFormat = $"{$"{PrefixLog.Base} {PrefixLog.Param}".Purple()} {$"{msg}".Purple()}";
+            var msgFormat = $"{$"{PrefixLog.Base} {PrefixLog.Param}".Pink()} {$"{msg}".Pink()}";
             var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Param} {msg}";
 
             CheckTypeLog(msgFormat, logFormat, typeLog);
