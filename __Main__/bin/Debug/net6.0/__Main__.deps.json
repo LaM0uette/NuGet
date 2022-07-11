@@ -8,31 +8,10 @@
     ".NETCoreApp,Version=v6.0": {
       "__Main__/1.0.0": {
         "dependencies": {
-          "Logger": "1.0.0",
-          "Npgsql": "7.0.0-preview.5"
+          "Logger": "1.0.0"
         },
         "runtime": {
           "__Main__.dll": {}
-        }
-      },
-      "Microsoft.Extensions.Logging.Abstractions/6.0.1": {
-        "runtime": {
-          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.322.12309"
-          }
-        }
-      },
-      "Npgsql/7.0.0-preview.5": {
-        "dependencies": {
-          "Microsoft.Extensions.Logging.Abstractions": "6.0.1",
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
-        },
-        "runtime": {
-          "lib/net6.0/Npgsql.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.0.0"
-          }
         }
       },
       "Pastel/3.0.1": {
@@ -43,7 +22,6 @@
           }
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "Logger/1.0.0": {
         "dependencies": {
           "Pastel": "3.0.1"
@@ -60,33 +38,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.Logging.Abstractions/6.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-dzB2Cgg+JmrouhjkcQGzSFjjvpwlq353i8oBQO2GWNjCXSzhbtBRUf28HSauWe7eib3wYOdb3tItdjRwAdwCSg==",
-      "path": "microsoft.extensions.logging.abstractions/6.0.1",
-      "hashPath": "microsoft.extensions.logging.abstractions.6.0.1.nupkg.sha512"
-    },
-    "Npgsql/7.0.0-preview.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-C0dceAeiOKuar8cejBCWxii5Y83pAaBqAEypFlFP5gn+ieJzk1wPsAbCBfHBVBXavyurdBYJksIccd0rhiwdNw==",
-      "path": "npgsql/7.0.0-preview.5",
-      "hashPath": "npgsql.7.0.0-preview.5.nupkg.sha512"
-    },
     "Pastel/3.0.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-HlxB9PGDNKgwxxqiQ0wnYKt8XZ6sJ25vJ2jVnMZ7lYVDVeo1SZ/6RM9m4bvYwV6dFTfk+RoR3T2LV/oSVu6ZDw==",
       "path": "pastel/3.0.1",
       "hashPath": "pastel.3.0.1.nupkg.sha512"
-    },
-    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
-      "path": "system.runtime.compilerservices.unsafe/6.0.0",
-      "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
     },
     "Logger/1.0.0": {
       "type": "project",
