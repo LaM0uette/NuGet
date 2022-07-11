@@ -17,11 +17,11 @@ namespace Logger
 
         //
         public static string Blue(this string input) => input.SetRgb(108, 214, 245);
-        public static string Green(this string input) => input.SetRgb(76, 228, 126);
+        public static string Green(this string input) => input.SetRgb(44, 168, 65);
         public static string Red(this string input) => input.SetRgb(235, 66, 71);
-        public static string Pink(this string input) => input.SetRgb(235, 61, 125);
+        public static string Pink(this string input) => input.SetRgb(204, 57, 199);
         
-        public static string BgGreen(this string input) => input.SetRgb(240, 240, 240).SetRgbBg(76, 228, 126);
+        public static string BgGreen(this string input) => input.SetRgb(240, 240, 240).SetRgbBg(44, 168, 65);
         public static string BgRed(this string input) => input.SetRgb(240, 240, 240).SetRgbBg(235, 66, 71);
     }
 
@@ -79,7 +79,7 @@ namespace Logger
             w.WriteLine(msg);
         }
 
-        private void CheckTypeLog(string msgFormat, string logFormat, TypeLog typeLog = TypeLog.All, int mode = 0)
+        private void CheckTypeLog(string msgFormat = "", string logFormat = "", TypeLog typeLog = TypeLog.All, int mode = 0)
         {
             if (mode == 0)
             {
@@ -149,6 +149,14 @@ namespace Logger
             var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Crash} {msg}";
 
             CheckTypeLog(msgFormat, logFormat, typeLog);
+        }
+        
+        //
+        public void Progress(string msg, int v1, int v2, TypeLog typeLog = TypeLog.Cmd)
+        {
+            var msgFormat = $"\r{$": {msg}".Blue()} {$"{v1}".Green()}{$"/".Blue()}{$"{v2}".Green()}";
+
+            CheckTypeLog(msgFormat, typeLog: typeLog);
         }
     }
 }

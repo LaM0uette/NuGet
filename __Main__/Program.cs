@@ -1,4 +1,5 @@
-﻿using Logger;
+﻿using System.Diagnostics;
+using Logger;
 
 namespace __Main__
 {
@@ -15,6 +16,12 @@ namespace __Main__
             log.Val("Salut je suis une validation");
             log.Err("Salut je suis une erreur");
             log.Crash("Salut je suis un crash");
+
+            for (var i = 1; i < 100; i++)
+            {
+                log.Progress("Chargement", i, 100);
+                Thread.Sleep(100);
+            }
             
             Console.ReadLine();
         }
