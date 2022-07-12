@@ -7,6 +7,7 @@ namespace __Main__
         public static void Main()
         {
             TestLogger();
+            TestDump();
             Console.ReadLine();
         }
         
@@ -49,6 +50,19 @@ namespace __Main__
             log.Category("Titre de la categorie");
             log.SubCategory("Titre de la Subcategorie", "Valeur du bilan");
             log.Description("Titre", "Valeur");
+        }
+
+        private static void TestDump()
+        {
+            var dump = new Dump();
+
+            var lst = new List<string>();
+            
+            lst.Add("Salut");
+            lst.Add("Bopnjour");
+            lst.Add("MaBite");
+            
+            dump.WriteDump(lst);
         }
     }
 }

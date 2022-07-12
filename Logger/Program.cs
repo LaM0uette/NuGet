@@ -3,7 +3,15 @@ using Pastel;
 
 namespace Logger
 {
-    public static class Test
+    public static class Func
+    {
+        public static string GetTimestamp(DateTime value)
+        {
+            return value.ToString("yyyy-MM-dd__HH-mm-ss");
+        }
+    }
+    
+    public static class Rgb
     {
         private static string SetRgb(this string input, int red, int green, int blue)
         {
@@ -64,7 +72,7 @@ namespace Logger
         {
             var directory = dir == "" ? Directory.GetCurrentDirectory() : dir;
             var folderName = Path.Join(directory, "logs");
-            var fileName = log + $"_{GetTimestamp(DateTime.Now)}.log";
+            var fileName = log + $"_{Func.GetTimestamp(DateTime.Now)}.dump";
 
             Directory.CreateDirectory(folderName);
             FilePath = Path.Join(folderName, fileName);
@@ -72,11 +80,6 @@ namespace Logger
 
         //
         // Functions
-        private static string GetTimestamp(DateTime value)
-        {
-            return value.ToString("yyyy-MM-dd__HH-mm-ss");
-        }
-
         private void WriteLog(string msg)
         {
             using var w = File.AppendText(FilePath);
@@ -227,6 +230,33 @@ namespace Logger
             var logFormat = $"{title}: {msg}";
 
             CheckTypeLog(msgFormat, logFormat, typeLog);
+        }
+    }
+    
+    public class Dump
+    {
+        //
+        // Variables
+        private string FilePath { get; }
+
+        //
+        // Constructor
+        public Dump(string dir = "", string dump = "Dump")
+        {
+            var directory = dir == "" ? Directory.GetCurrentDirectory() : dir;
+            var folderName = Path.Join(directory, "dumps");
+            var fileName = dump + $"_{Func.GetTimestamp(DateTime.Now)}.csv";
+
+            Directory.CreateDirectory(folderName);
+            FilePath = Path.Join(folderName, fileName);
+        }
+
+        //
+        // Functions
+        public void WriteDump(List<string> data)
+        {
+            using var w = File.AppendText(FilePath);
+            w.WriteLine(string.Join(";", data));
         }
     }
 }
