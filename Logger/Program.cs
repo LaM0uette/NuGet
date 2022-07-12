@@ -262,10 +262,10 @@ namespace Logger
         
         //
         // Dumps
-        public void Sting(string data) => WriteDump(data);
+        public void String(string data) => WriteDump(data);
         
-        public void StingArray(string[] data) => WriteDump(string.Join(";", data));
+        public void StringArray(string[] data) => WriteDump(string.Join(";", data));
         
-        public void StingList(IEnumerable<string> data) => WriteDump(string.Join(";", data));
+        public void StringList(IEnumerable<string> data) => WriteDump(string.Join(";", data));
     }
 }
