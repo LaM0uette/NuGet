@@ -77,17 +77,17 @@ namespace __Main__
             var dump2 = new Dump(name: "Dump2");
             var dump3 = new Dump(name: "Dump3");
             
-            var stc = new DumpStruct("Salut", "Bopnjour", "MaBite");
+            var stc = new DumpStruct("Salut", "Bonjour", "MaBite");
             dump1.Sting(stc.ToString());
             dump1.Sting(stc.ToString());
             dump1.Sting(stc.ToString());
 
-            var arr = new[] {"Salut", "Bopnjour", "MaBite"};
+            var arr = new[] {"Salut", "Bonjour", "MaBite"};
             dump2.StingArray(arr);
             dump2.StingArray(arr);
             dump2.StingArray(arr);
 
-            var lst = new List<string> {"Salut", "Bopnjour", "MaBite"};
+            var lst = new List<string> {"Salut", "Bonjour", "MaBite"};
             dump3.StingList(lst);
             dump3.StingList(lst);
             dump3.StingList(lst);
