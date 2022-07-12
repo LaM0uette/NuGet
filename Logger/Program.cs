@@ -24,6 +24,7 @@ namespace Logger
         
         public static string BgGreen(this string input) => input.SetRgb(240, 240, 240).SetRgbBg(44, 168, 65);
         public static string BgRed(this string input) => input.SetRgb(240, 240, 240).SetRgbBg(235, 66, 71);
+        public static string BgPink(this string input) => input.SetRgb(240, 240, 240).SetRgbBg(204, 57, 199);
     }
 
     public class Log
@@ -200,6 +201,22 @@ namespace Logger
         {
             var msgFormat = $"\n\n{$"{PrefixLog.Sep}".Gray()} {$"{msg}".Green()} {$"{PrefixLog.Sep}".Gray()}";
             var logFormat = $"\n\n{PrefixLog.Sep} {msg} {PrefixLog.Sep}";
+
+            CheckTypeLog(msgFormat, logFormat, typeLog);
+        }
+        
+        //
+        public void Category(string msg, TypeLog typeLog = TypeLog.All)
+        {
+            var msgFormat = $"{msg}".BgPink();
+
+            CheckTypeLog(msgFormat, msg, typeLog);
+        }
+        
+        public void SubCategory(string title, string msg, TypeLog typeLog = TypeLog.All)
+        {
+            var msgFormat = $"\t{$"{title}".Pink()}: {$"{msg}".Green()}";
+            var logFormat = $"\t{title}: {msg}";
 
             CheckTypeLog(msgFormat, logFormat, typeLog);
         }

@@ -44,6 +44,10 @@ namespace __Main__
                 log.Progress("Chargement", i+1, 100);
                 Thread.Sleep(20);
             }
+            
+            log.Separator("BILAN");
+            log.Category("Titre de la categorie");
+            log.SubCategory("Titre de la Subcategorie", "Valeur du bilan");
         }
     }
 }
