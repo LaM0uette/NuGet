@@ -21,8 +21,9 @@ namespace __Main__
             log.Nok("Salut je suis un nok", Log.TypeLog.Log);
             
             log.Separator("CONFIG");
-            log.Info("Salut je suis un info");
+            log.Info("Salut je suis une info");
             log.Param("Salut je suis un paramètre");
+            log.Param("Salut je suis le paramètre N°", $"{5}");
             
             log.Separator("ETATS");
             log.Val("Salut je suis une validation");
