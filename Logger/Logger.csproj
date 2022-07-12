@@ -8,7 +8,7 @@
         <PackageIcon>docs\log.png</PackageIcon>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Title>Logger</Title>
-        <Description>Gestions des logs automatisés</Description>
+        <Description>Gestion des logs automatisés</Description>
         <Copyright>© 2022 - 2030 LaM0uette</Copyright>
         <RepositoryUrl>https://github.com/LaM0uette/NuGet</RepositoryUrl>
         <RepositoryType>Github</RepositoryType>

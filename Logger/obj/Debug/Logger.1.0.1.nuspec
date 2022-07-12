@@ -6,7 +6,7 @@
     <title>Logger</title>
     <authors>Logger</authors>
     <icon>docs\log.png</icon>
-    <description>Gestions des logs automatisés</description>
+    <description>Gestion des logs automatisés</description>
     <releaseNotes>Bug mineur et ajout des infos</releaseNotes>
     <copyright>© 2022 - 2030 LaM0uette</copyright>
     <tags>log, logger, logging</tags>

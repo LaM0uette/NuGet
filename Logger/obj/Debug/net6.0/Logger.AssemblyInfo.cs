@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Logger")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("© 2022 - 2030 LaM0uette")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("Gestions des logs automatisés")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Gestion des logs automatisés")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Logger")]
