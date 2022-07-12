@@ -68,11 +68,11 @@ namespace Logger
 
         //
         // Constructor
-        public Log(string dir = "", string log = "Log")
+        public Log(string dir = "", string name = "Log")
         {
             var directory = dir == "" ? Directory.GetCurrentDirectory() : dir;
             var folderName = Path.Join(directory, "logs");
-            var fileName = log + $"_{Func.GetTimestamp(DateTime.Now)}.dump";
+            var fileName = name + $"_{Func.GetTimestamp(DateTime.Now)}.dump";
 
             Directory.CreateDirectory(folderName);
             FilePath = Path.Join(folderName, fileName);
@@ -241,11 +241,11 @@ namespace Logger
 
         //
         // Constructor
-        public Dump(string dir = "", string dump = "Dump")
+        public Dump(string dir = "", string name = "Dump")
         {
             var directory = dir == "" ? Directory.GetCurrentDirectory() : dir;
             var folderName = Path.Join(directory, "dumps");
-            var fileName = dump + $"_{Func.GetTimestamp(DateTime.Now)}.csv";
+            var fileName = name + $"_{Func.GetTimestamp(DateTime.Now)}.csv";
 
             Directory.CreateDirectory(folderName);
             FilePath = Path.Join(folderName, fileName);
@@ -253,7 +253,13 @@ namespace Logger
 
         //
         // Functions
-        public void WriteDump(List<string> data)
+        public void StingArray(string[] data)
+        {
+            using var w = File.AppendText(FilePath);
+            w.WriteLine(string.Join(";", data));
+        }
+        
+        public void StingList(List<string> data)
         {
             using var w = File.AppendText(FilePath);
             w.WriteLine(string.Join(";", data));

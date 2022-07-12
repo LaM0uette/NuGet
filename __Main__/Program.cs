@@ -10,7 +10,7 @@ namespace __Main__
             TestDump();
             Console.ReadLine();
         }
-        
+
         private static void TestLogger()
         {
             var log = new Log();
@@ -20,18 +20,18 @@ namespace __Main__
             log.Ok("Salut je suis un ok", Log.TypeLog.Cmd);
             log.Nok("Salut je suis un nok");
             log.Nok("Salut je suis un nok", Log.TypeLog.Log);
-            
+
             log.Separator("CONFIG");
             log.Info("Salut je suis une info");
             log.Param("Salut je suis un paramètre");
             log.Param("Salut je suis le paramètre N°", $"{5}");
-            
+
             log.Separator("ETATS");
             log.Val("Salut je suis une validation");
             log.Val("Salut j'ai validé le check : ", $"{12}");
             log.Err("Salut je suis une erreur");
             log.Crash("Salut je suis un crash");
-            
+
             log.Separator("VOID");
             log.Void("Salut je suis un void");
             log.VoidBlue("Salut je suis un void blue");
@@ -42,10 +42,10 @@ namespace __Main__
             log.Separator("PROGRESS");
             for (var i = 0; i < 100; i++)
             {
-                log.Progress("Chargement", i+1, 100);
-                Thread.Sleep(20);
+                log.Progress("Chargement", i + 1, 100);
+                Thread.Sleep(5);
             }
-            
+
             log.Separator("BILAN");
             log.Category("Titre de la categorie");
             log.SubCategory("Titre de la Subcategorie", "Valeur du bilan");
@@ -54,18 +54,18 @@ namespace __Main__
 
         private static void TestDump()
         {
-            var dump = new Dump();
+            var dump1 = new Dump(name: "Dump1");
+            var dump2 = new Dump(name: "Dump2");
 
-            var lst = new List<string>();
-            
-            lst.Add("Salut");
-            lst.Add("Bopnjour");
-            lst.Add("MaBite");
-            
-            dump.WriteDump(lst);
-            dump.WriteDump(lst);
-            dump.WriteDump(lst);
-            dump.WriteDump(lst);
+            var arr = new[] {"Salut", "Bopnjour", "MaBite"};
+            dump1.StingArray(arr);
+            dump1.StingArray(arr);
+            dump1.StingArray(arr);
+
+            var lst = new List<string> {"Salut", "Bopnjour", "MaBite"};
+            dump2.StingList(lst);
+            dump2.StingList(lst);
+            dump2.StingList(lst);
         }
     }
 }
