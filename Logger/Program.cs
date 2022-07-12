@@ -259,7 +259,7 @@ namespace Logger
             w.WriteLine(string.Join(";", data));
         }
         
-        public void StingList(List<string> data)
+        public void StingList(IEnumerable<string> data)
         {
             using var w = File.AppendText(FilePath);
             w.WriteLine(string.Join(";", data));
