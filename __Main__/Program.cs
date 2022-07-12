@@ -4,6 +4,25 @@ namespace __Main__
 {
     public static class Program
     {
+        private struct DumpStruct
+        {
+            private string Col1 { get; }
+            private string Col2 { get; }
+            private string Col3 { get; }
+
+            public DumpStruct(string col1, string col2, string col3)
+            {
+                Col1 = col1;
+                Col2 = col2;
+                Col3 = col3;
+            }
+
+            public override string ToString()
+            {
+                return $"{Col1};{Col2};{Col3}";
+            }
+        }
+        
         public static void Main()
         {
             TestLogger();
@@ -56,16 +75,22 @@ namespace __Main__
         {
             var dump1 = new Dump(name: "Dump1");
             var dump2 = new Dump(name: "Dump2");
+            var dump3 = new Dump(name: "Dump3");
+            
+            var stc = new DumpStruct("Salut", "Bopnjour", "MaBite");
+            dump1.Sting(stc.ToString());
+            dump1.Sting(stc.ToString());
+            dump1.Sting(stc.ToString());
 
             var arr = new[] {"Salut", "Bopnjour", "MaBite"};
-            dump1.StingArray(arr);
-            dump1.StingArray(arr);
-            dump1.StingArray(arr);
+            dump2.StingArray(arr);
+            dump2.StingArray(arr);
+            dump2.StingArray(arr);
 
             var lst = new List<string> {"Salut", "Bopnjour", "MaBite"};
-            dump2.StingList(lst);
-            dump2.StingList(lst);
-            dump2.StingList(lst);
+            dump3.StingList(lst);
+            dump3.StingList(lst);
+            dump3.StingList(lst);
         }
     }
 }

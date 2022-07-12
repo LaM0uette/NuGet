@@ -253,16 +253,18 @@ namespace Logger
 
         //
         // Functions
-        public void StingArray(string[] data)
+        private void WriteDump(string data)
         {
             using var w = File.AppendText(FilePath);
-            w.WriteLine(string.Join(";", data));
+            w.WriteLine(data);
         }
         
-        public void StingList(IEnumerable<string> data)
-        {
-            using var w = File.AppendText(FilePath);
-            w.WriteLine(string.Join(";", data));
-        }
+        //
+        // Dumps
+        public void Sting(string data) => WriteDump(data);
+        
+        public void StingArray(string[] data) => WriteDump(string.Join(";", data));
+        
+        public void StingList(IEnumerable<string> data) => WriteDump(string.Join(";", data));
     }
 }
