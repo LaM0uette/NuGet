@@ -1,15 +1,12 @@
-﻿using BenchmarkDotNet.Running;
-using Logger;
+﻿using Logger;
 
 namespace __Main__
 {
-    public class Program
+    public static class Program
     {
         public static void Main()
         {
-            var summary = BenchmarkRunner.Run<Bench>();
-            //TestLogger();
-            
+            TestLogger();
             Console.ReadLine();
         }
         
