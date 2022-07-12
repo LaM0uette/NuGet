@@ -208,15 +208,23 @@ namespace Logger
         //
         public void Category(string msg, TypeLog typeLog = TypeLog.All)
         {
-            var msgFormat = $"{msg}".BgPink();
+            var msgFormat = $"{msg}:".BgPink();
 
             CheckTypeLog(msgFormat, msg, typeLog);
         }
         
         public void SubCategory(string title, string msg, TypeLog typeLog = TypeLog.All)
         {
-            var msgFormat = $"\t{$"{title}".Pink()}: {$"{msg}".Green()}";
-            var logFormat = $"\t{title}: {msg}";
+            var msgFormat = $"   {$"{title}".Pink()}: {$"{msg}".Green()}";
+            var logFormat = $"   {title}: {msg}";
+
+            CheckTypeLog(msgFormat, logFormat, typeLog);
+        }
+        
+        public void Description(string title, string msg, TypeLog typeLog = TypeLog.All)
+        {
+            var msgFormat = $"{title}: {$"{msg}".Green()}";
+            var logFormat = $"{title}: {msg}";
 
             CheckTypeLog(msgFormat, logFormat, typeLog);
         }

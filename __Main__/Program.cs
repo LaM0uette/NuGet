@@ -48,6 +48,7 @@ namespace __Main__
             log.Separator("BILAN");
             log.Category("Titre de la categorie");
             log.SubCategory("Titre de la Subcategorie", "Valeur du bilan");
+            log.Description("Titre", "Valeur");
         }
     }
 }
