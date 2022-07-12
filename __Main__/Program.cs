@@ -63,6 +63,9 @@ namespace __Main__
             lst.Add("MaBite");
             
             dump.WriteDump(lst);
+            dump.WriteDump(lst);
+            dump.WriteDump(lst);
+            dump.WriteDump(lst);
         }
     }
 }
