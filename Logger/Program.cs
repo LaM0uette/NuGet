@@ -72,7 +72,7 @@ namespace Logger
         {
             var directory = dir == "" ? Directory.GetCurrentDirectory() : dir;
             var folderName = Path.Join(directory, "logs");
-            var fileName = name + $"_{Func.GetTimestamp(DateTime.Now)}.dump";
+            var fileName = name + $"_{Func.GetTimestamp(DateTime.Now)}.log";
 
             Directory.CreateDirectory(folderName);
             FilePath = Path.Join(folderName, fileName);

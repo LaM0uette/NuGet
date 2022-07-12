@@ -5,11 +5,18 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>Logger</RootNamespace>
-        <PackageIcon>log.ico</PackageIcon>
+        <PackageIcon>docs\log.png</PackageIcon>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="Pastel" Version="3.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="docs\log.png">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
     </ItemGroup>
 
 </Project>
