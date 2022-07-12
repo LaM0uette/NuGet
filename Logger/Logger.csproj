@@ -6,6 +6,15 @@
         <Nullable>enable</Nullable>
         <RootNamespace>Logger</RootNamespace>
         <PackageIcon>docs\log.png</PackageIcon>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>Logger</Title>
+        <Description>Gestions des logs automatisés</Description>
+        <Copyright>© 2022 - 2030 LaM0uette</Copyright>
+        <RepositoryUrl>https://github.com/LaM0uette/NuGet</RepositoryUrl>
+        <RepositoryType>Github</RepositoryType>
+        <PackageTags>log, logger, logging</PackageTags>
+        <PackageReleaseNotes>Bug mineur et ajout des infos</PackageReleaseNotes>
+        <PackageVersion>1.0.1</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
