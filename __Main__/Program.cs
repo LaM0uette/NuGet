@@ -4,7 +4,17 @@ namespace __Main__
 {
     public static class Program
     {
-        private struct DumpStruct
+        public static void Main()
+        {
+            //TestLogger();
+            //TestDump();
+
+            Console.ReadLine();
+        }
+
+        //
+        // Logger
+        private readonly struct DumpStruct
         {
             private string Col1 { get; }
             private string Col2 { get; }
@@ -21,13 +31,6 @@ namespace __Main__
             {
                 return $"{Col1};{Col2};{Col3}";
             }
-        }
-        
-        public static void Main()
-        {
-            TestLogger();
-            TestDump();
-            Console.ReadLine();
         }
 
         private static void TestLogger()
@@ -76,7 +79,7 @@ namespace __Main__
             var dump1 = new Dump(name: "Dump1");
             var dump2 = new Dump(name: "Dump2");
             var dump3 = new Dump(name: "Dump3");
-            
+
             var stc = new DumpStruct("Salut", "Bonjour", "MaBite");
             dump1.String(stc.ToString());
             dump1.String(stc.ToString());
