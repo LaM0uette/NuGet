@@ -131,10 +131,10 @@ namespace Logger
             CheckTypeLog(msgFormat, logFormat, typeLog);
         }
         
-        public void Val(string msg, TypeLog typeLog = TypeLog.All)
+        public void Val(string msg, string value = "", TypeLog typeLog = TypeLog.All)
         {
-            var msgFormat = $"{$"{PrefixLog.Base}".Green()} {$"{PrefixLog.Val[..5]}".BgGreen()}{$": {msg}".Green()}";
-            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Val} {msg}";
+            var msgFormat = $"{$"{PrefixLog.Base}".Green()} {$"{PrefixLog.Val[..5]}".BgGreen()}{$": {msg}".Green()}{$"{value}".Blue()}";
+            var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Val} {msg}{value}";
 
             CheckTypeLog(msgFormat, logFormat, typeLog);
         }

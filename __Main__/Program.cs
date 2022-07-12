@@ -27,6 +27,7 @@ namespace __Main__
             
             log.Separator("ETATS");
             log.Val("Salut je suis une validation");
+            log.Val("Salut j'ai validé le check : ", $"{12}");
             log.Err("Salut je suis une erreur");
             log.Crash("Salut je suis un crash");
             
