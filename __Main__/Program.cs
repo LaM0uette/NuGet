@@ -7,12 +7,14 @@ namespace __Main__
         public static void Main()
         {
             TestLogger();
+            
+            Console.ReadLine();
         }
-
+        
         private static void TestLogger()
         {
             var log = new Log();
-            
+
             log.Separator("OK / NOK");
             log.Ok("Salut je suis un ok");
             log.Ok("Salut je suis un ok", Log.TypeLog.Cmd);
@@ -41,8 +43,6 @@ namespace __Main__
                 log.Progress("Chargement", i+1, 100);
                 Thread.Sleep(20);
             }
-            
-            Console.ReadLine();
         }
     }
 }
