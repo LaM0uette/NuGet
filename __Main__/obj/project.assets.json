@@ -11,7 +11,7 @@
           "lib/net6.0/Pastel.dll": {}
         }
       },
-      "Logger/1.0.0": {
+      "Logger/1.0.1": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -44,7 +44,7 @@
         "pastel.nuspec"
       ]
     },
-    "Logger/1.0.0": {
+    "Logger/1.0.1": {
       "type": "project",
       "path": "../Logger/Logger.csproj",
       "msbuildProject": "../Logger/Logger.csproj"
@@ -52,7 +52,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Logger >= 1.0.0"
+      "Logger >= 1.0.1"
     ]
   },
   "packageFolders": {
