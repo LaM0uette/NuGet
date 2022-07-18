@@ -6,8 +6,8 @@ namespace __Main__
     {
         public static void Main()
         {
-            //TestLogger();
-            //TestDump();
+            TestLogger();
+            TestDump();
 
             Console.ReadLine();
         }

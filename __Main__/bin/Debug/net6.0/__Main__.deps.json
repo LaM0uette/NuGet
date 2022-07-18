@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "__Main__/1.0.0": {
         "dependencies": {
-          "Logger": "1.0.0"
+          "Logger": "1.0.1"
         },
         "runtime": {
           "__Main__.dll": {}
@@ -22,7 +22,7 @@
           }
         }
       },
-      "Logger/1.0.0": {
+      "Logger/1.0.1": {
         "dependencies": {
           "Pastel": "3.0.1"
         },
@@ -45,7 +45,7 @@
       "path": "pastel/3.0.1",
       "hashPath": "pastel.3.0.1.nupkg.sha512"
     },
-    "Logger/1.0.0": {
+    "Logger/1.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

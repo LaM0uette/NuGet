@@ -3,13 +3,20 @@ using Pastel;
 
 namespace Logger
 {
+    #region [Class] - Functions
+    
     public static class Func
     {
-        public static string GetTimestamp(DateTime value)
-        {
-            return value.ToString("yyyy-MM-dd__HH-mm-ss");
-        }
+        /// <summary>
+        /// Permet de générer et retourner un timestamp
+        /// </summary>
+        /// <returns>Retourne un timestamp de type string</returns>
+        public static string GetTimestamp() => DateTime.Now.ToString("yyyy-MM-dd__HH-mm-ss");
     }
+
+    #endregion
+    
+    //
     
     public static class Rgb
     {
@@ -72,7 +79,7 @@ namespace Logger
         {
             var directory = dir == "" ? Directory.GetCurrentDirectory() : dir;
             var folderName = Path.Join(directory, "logs");
-            var fileName = name + $"_{Func.GetTimestamp(DateTime.Now)}.log";
+            var fileName = name + $"_{Func.GetTimestamp()}.log";
 
             Directory.CreateDirectory(folderName);
             FilePath = Path.Join(folderName, fileName);
@@ -245,7 +252,7 @@ namespace Logger
         {
             var directory = dir == "" ? Directory.GetCurrentDirectory() : dir;
             var folderName = Path.Join(directory, "dumps");
-            var fileName = name + $"_{Func.GetTimestamp(DateTime.Now)}.csv";
+            var fileName = name + $"_{Func.GetTimestamp()}.csv";
 
             Directory.CreateDirectory(folderName);
             FilePath = Path.Join(folderName, fileName);
@@ -268,3 +275,5 @@ namespace Logger
         public void StringList(IEnumerable<string> data) => WriteDump(string.Join(";", data));
     }
 }
+
+//[Class] - 
