@@ -8,9 +8,9 @@ namespace Logger
     public static class Func
     {
         /// <summary>
-        /// Permet de générer et retourner un timestamp
+        /// Generate and return timestamp
         /// </summary>
-        /// <returns>string -> yyyy-MM-dd__HH-mm-ss</returns>
+        /// <returns><see cref="string"></see> -> yyyy-MM-dd__HH-mm-ss</returns>
         /// <example>2022-07-18__11-37-20</example>
         public static string GetTimestamp() => DateTime.Now.ToString("yyyy-MM-dd__HH-mm-ss");
     }
@@ -21,26 +21,56 @@ namespace Logger
     
     public static class Rgb
     {
-        private static string SetRgb(this string input, int red, int green, int blue)
-        {
-            return input.Pastel(Color.FromArgb(red, green, blue));
-        }
+        #region Functions
 
-        private static string SetRgbBg(this string input, int red, int green, int blue)
-        {
-            return input.PastelBg(Color.FromArgb(red, green, blue));
-        }
-
-        //
-        public static string Blue(this string input) => input.SetRgb(108, 214, 245);
-        public static string Gray(this string input) => input.SetRgb(80, 80, 80);
-        public static string Green(this string input) => input.SetRgb(44, 168, 65);
-        public static string Red(this string input) => input.SetRgb(235, 66, 71);
-        public static string Pink(this string input) => input.SetRgb(204, 57, 199);
+        /// <summary>
+        /// Change foreground color of string in the console
+        /// </summary>
+        /// <param name="input">The string to color</param>
+        /// <param name="red">Red value - [0-255]</param>
+        /// <param name="green">Green value - [0-255]</param>
+        /// <param name="blue">Blue value - [0-255]</param>
+        /// <returns><see cref="string"></see> with foreground color</returns>
+        private static string SetForegroundRgb(this string input, int red, int green, int blue) =>
+            input.Pastel(Color.FromArgb(red, green, blue));
         
-        public static string BgGreen(this string input) => input.SetRgb(240, 240, 240).SetRgbBg(44, 168, 65);
-        public static string BgRed(this string input) => input.SetRgb(240, 240, 240).SetRgbBg(235, 66, 71);
-        public static string BgPink(this string input) => input.SetRgb(240, 240, 240).SetRgbBg(204, 57, 199);
+        /// <summary>
+        /// Change background color of string in the console
+        /// </summary>
+        /// <param name="input">The string to color</param>
+        /// <param name="red">Red value - [0-255]</param>
+        /// <param name="green">Green value - [0-255]</param>
+        /// <param name="blue">Blue value - [0-255]</param>
+        /// <returns><see cref="string"></see> with background color</returns>
+        private static string SetBackgroundRgb(this string input, int red, int green, int blue) =>
+            input.PastelBg(Color.FromArgb(red, green, blue));
+
+        #endregion
+        
+        //
+
+        #region Foreground colors
+
+        public static string Blue(this string input) => input.SetForegroundRgb(108, 214, 245);
+        public static string Gray(this string input) => input.SetForegroundRgb(80, 80, 80);
+        public static string Green(this string input) => input.SetForegroundRgb(44, 168, 65);
+        public static string Red(this string input) => input.SetForegroundRgb(235, 66, 71);
+        public static string Pink(this string input) => input.SetForegroundRgb(204, 57, 199);
+
+        #endregion
+        
+        //
+
+        #region Background colors
+
+        public static string BgGreen(this string input) => 
+            input.SetForegroundRgb(240, 240, 240).SetBackgroundRgb(44, 168, 65);
+        public static string BgRed(this string input) => 
+            input.SetForegroundRgb(240, 240, 240).SetBackgroundRgb(235, 66, 71);
+        public static string BgPink(this string input) => 
+            input.SetForegroundRgb(240, 240, 240).SetBackgroundRgb(204, 57, 199);
+
+        #endregion
     }
 
     public class Log
