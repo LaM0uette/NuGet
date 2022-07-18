@@ -3,8 +3,6 @@ using Pastel;
 
 namespace Logger
 {
-    #region [Class] - Functions
-    
     public static class Func
     {
         /// <summary>
@@ -14,8 +12,6 @@ namespace Logger
         /// <example>2022-07-18__11-37-20</example>
         public static string GetTimestamp() => DateTime.Now.ToString("yyyy-MM-dd__HH-mm-ss");
     }
-
-    #endregion
     
     //
     
@@ -75,12 +71,21 @@ namespace Logger
 
     public class Log
     {
-        //
-        // Variables
+        #region Statements
+
+        /// <summary>
+        /// Log file path
+        /// </summary>
         private string FilePath { get; }
 
-        //
-        // Class
+        /// <summary>
+        /// Different types of log
+        /// </summary>
+        /// <example>
+        /// <see cref="All"></see> => Print in console and write in log file<br/>
+        /// <see cref="Cmd"></see> => Only print in console<br/>
+        /// <see cref="Log"></see> => Only write in log file<br/>
+        /// </example>
         public enum TypeLog
         {
             All,
@@ -88,6 +93,12 @@ namespace Logger
             Log,
         }
 
+        /// <summary>
+        /// Prefix of different log types
+        /// </summary>
+        /// <example><see cref="Ok"></see> => [OKK]:<br/>
+        /// <see cref="Nok"></see> => [NOK]:
+        /// </example>
         private static class PrefixLog
         {
             public const string Base = "|███|";
@@ -103,9 +114,17 @@ namespace Logger
             
             public const string Sep = "■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■";
         }
-
-        //
-        // Constructor
+        
+        /// <summary>
+        /// Create an instance of Log
+        /// </summary>
+        /// <param name="dir">Log file path</param>
+        /// <param name="name">Log file name</param>
+        /// <remarks>
+        /// <see cref="dir"> - Default => <code>Directory.GetCurrentDirectory()</code></see><br/>
+        /// <see cref="name"> - Default => "Log"</see><br/>
+        /// </remarks>
+        /// <example><code>var log = new Log(dir: "C:\\Users\\XD5965", name:"Log")</code></example>
         public Log(string dir = "", string name = "Log")
         {
             var directory = dir == "" ? Directory.GetCurrentDirectory() : dir;
@@ -115,6 +134,8 @@ namespace Logger
             Directory.CreateDirectory(folderName);
             FilePath = Path.Join(folderName, fileName);
         }
+        
+        #endregion
 
         //
         // Functions
