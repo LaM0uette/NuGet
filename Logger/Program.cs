@@ -10,7 +10,8 @@ namespace Logger
         /// <summary>
         /// Permet de générer et retourner un timestamp
         /// </summary>
-        /// <returns>Retourne un timestamp de type string</returns>
+        /// <returns>string -> yyyy-MM-dd__HH-mm-ss</returns>
+        /// <example>2022-07-18__11-37-20</example>
         public static string GetTimestamp() => DateTime.Now.ToString("yyyy-MM-dd__HH-mm-ss");
     }
 
