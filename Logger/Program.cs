@@ -138,13 +138,26 @@ namespace Logger
         #endregion
 
         //
-        // Functions
+
+        #region Functions
+
+        /// <summary>
+        /// Write txt in log file
+        /// </summary>
+        /// <param name="msg">Message to add to the log file</param>
         private void WriteLog(string msg)
         {
             using var w = File.AppendText(FilePath);
             w.WriteLine(msg);
         }
 
+        /// <summary>
+        /// Check types of log and print/write log
+        /// </summary>
+        /// <param name="msgFormat">String message formated for console</param>
+        /// <param name="logFormat">String message formated for log file</param>
+        /// <param name="typeLog"><see cref="TypeLog"></see> => Type of log</param>
+        /// <param name="mode">Mode of print log in console<br/>0 for WriteLine<br/>1 for Write</param>
         private void CheckTypeLog(string msgFormat = "", string logFormat = "", TypeLog typeLog = TypeLog.All, int mode = 0)
         {
             switch (mode)
@@ -160,8 +173,12 @@ namespace Logger
             if (typeLog != TypeLog.Cmd) WriteLog(logFormat);
         }
 
+        #endregion
+
         //
-        // Loging
+
+        #region Logging
+
         public void Ok(string msg, TypeLog typeLog = TypeLog.All)
         {
             var msgFormat = $"{$"{PrefixLog.Base} {PrefixLog.Ok}".Green()} {$"{msg}".Green()}";
@@ -290,16 +307,29 @@ namespace Logger
 
             CheckTypeLog(msgFormat, logFormat, typeLog);
         }
+
+        #endregion
     }
     
     public class Dump
     {
-        //
-        // Variables
+        #region Statements
+
+        /// <summary>
+        /// Dump file path
+        /// </summary>
         private string FilePath { get; }
 
-        //
-        // Constructor
+        /// <summary>
+        /// Create an instance of Dump
+        /// </summary>
+        /// <param name="dir">Dump file path</param>
+        /// <param name="name">Dump file name</param>
+        /// <remarks>
+        /// <see cref="dir"> - Default => <code>Directory.GetCurrentDirectory()</code></see><br/>
+        /// <see cref="name"> - Default => "Dump"</see><br/>
+        /// </remarks>
+        /// <example><code>var dump = new Dump(dir: "C:\\Users\\XD5965", name:"Dump")</code></example>
         public Dump(string dir = "", string name = "Dump")
         {
             var directory = dir == "" ? Directory.GetCurrentDirectory() : dir;
@@ -310,22 +340,30 @@ namespace Logger
             FilePath = Path.Join(folderName, fileName);
         }
 
+        #endregion
+
         //
-        // Functions
+
+        #region Functions
+
         private void WriteDump(string data)
         {
             using var w = File.AppendText(FilePath);
             w.WriteLine(data);
         }
+
+        #endregion
         
         //
-        // Dumps
+
+        #region Dumpings
+
         public void String(string data) => WriteDump(data);
         
         public void StringArray(string[] data) => WriteDump(string.Join(";", data));
         
         public void StringList(IEnumerable<string> data) => WriteDump(string.Join(";", data));
+
+        #endregion
     }
 }
-
-//[Class] - 
