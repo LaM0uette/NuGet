@@ -12,9 +12,7 @@ namespace Logger
         /// <example>2022-07-18__11-37-20</example>
         public static string GetTimestamp() => DateTime.Now.ToString("yyyy-MM-dd__HH-mm-ss");
     }
-    
-    //
-    
+
     public static class Rgb
     {
         #region Functions
