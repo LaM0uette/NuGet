@@ -13,7 +13,9 @@ namespace __Main__
         }
 
         //
-        // Logger
+
+        #region Logger
+
         private readonly struct DumpStruct
         {
             private string Col1 { get; }
@@ -95,5 +97,7 @@ namespace __Main__
             dump3.StringList(lst);
             dump3.StringList(lst);
         }
+
+        #endregion
     }
 }
