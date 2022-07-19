@@ -101,6 +101,7 @@ public static class Draw
         log.VoidGreen(logo);
         log.Description($"\t{Constants.Author}", author);
         log.Description($"\t{Constants.Version}", version);
+        log.Space();
         
         1.SecondSleep();
     }
@@ -342,6 +343,16 @@ public class Log
         var logFormat = $"\n\n{PrefixLog.Sep} {msg} {PrefixLog.Sep}";
 
         CheckTypeLog(msgFormat, logFormat, typeLog);
+    }
+    
+    public void Space([Optional] TypeLog? typeLog)
+    {
+        CheckTypeLog("", "", typeLog);
+    }
+    
+    public void DoubleSpace([Optional] TypeLog? typeLog)
+    {
+        CheckTypeLog("\n", "\n", typeLog);
     }
     
     //
