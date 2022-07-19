@@ -106,6 +106,8 @@ namespace __Main__
         {
             var log = new Log();
             
+            const string author = "LaM0uette";
+            const string version = "1.0.2";
             const string logo = @"
         ███████╗██╗██╗     ███████╗██████╗ ██╗██████╗ 
         ██╔════╝██║██║     ██╔════╝██╔══██╗██║██╔══██╗
@@ -114,9 +116,9 @@ namespace __Main__
         ██║     ██║███████╗███████╗██████╔╝██║██║  ██║
         ╚═╝     ╚═╝╚══════╝╚══════╝╚═════╝ ╚═╝╚═╝  ╚═╝";
             
-            log.DrawStart(logo, "LaM0uette", "1.0.2");
+            log.DrawStart(logo, author, version);
             log.Ok("test");
-            log.DrawEnd("LaM0uette", "1.0.2");
+            log.DrawEnd(author, version);
         }
 
         #endregion
