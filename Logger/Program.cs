@@ -139,15 +139,7 @@ public static class Draw
         var i = 0;
         foreach (var arg in args)
         {
-            if (i == 0)
-            {
-                msgArgs += $" {arg}";
-            }
-            else
-            {
-                msgArgs += $" [{arg}]";
-            }
-            
+            msgArgs += i == 0 ? $" {arg}" : $"  [{arg}]";
             i++;
         }
         
