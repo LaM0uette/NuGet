@@ -12,7 +12,7 @@
         <PackageTags>common task, task, windows</PackageTags>
         <RepositoryType>Github</RepositoryType>
         <PackageVersion>1.0.1</PackageVersion>
-        <PackageReleaseNotes>add getTimeStamp and rename class windows</PackageReleaseNotes>
+        <PackageReleaseNotes></PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
