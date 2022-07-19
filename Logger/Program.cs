@@ -72,11 +72,37 @@ public static class Rgb
 
 public static class Draw
 {
-    public static void DrawStart(this Log log)
+    #region Class
+
+    private static class Constants
     {
-        log.Ok("Test");
-        log.Ok("Test1");
-        log.Ok("Test2");
+        public const string Author = "Auteur  ";
+        public const string Version = "Version ";
+    }
+
+    #endregion
+    
+    //
+    
+    private static void MillisecondSleep(this int time)
+    {
+        Thread.Sleep(time);
+    }
+    
+    private static void SecondSleep(this int time)
+    {
+        Thread.Sleep(time*1000);
+    }
+    
+    public static void DrawStart(this Log log, string logo, string author, string version)
+    {
+        if (log.SilentMode) return;
+        
+        log.VoidGreen(logo);
+        log.Description($"\t{Constants.Author}", author);
+        log.Description($"\t{Constants.Version}", version);
+        
+        1.SecondSleep();
     }
 }
 
@@ -97,6 +123,11 @@ public class Log
     /// Default log type
     /// </summary>
     private TypeLog DefaultTypeLog { get; }
+    
+    /// <summary>
+    /// Default silent mode
+    /// </summary>
+    public bool SilentMode { get; }
 
     /// <summary>
     /// Different log types
@@ -141,13 +172,15 @@ public class Log
     /// <param name="dir">Log file path</param>
     /// <param name="name">Log file name</param>
     /// <param name="typeLog">Log type</param>
+    /// <param name="silentMode">Silent mode</param>
     /// <remarks>
     /// <see cref="dir"> - Default => <code>Directory.GetCurrentDirectory()</code></see><br/>
     /// <see cref="name"> - Default => "Log"</see><br/>
     /// <see cref="typeLog"> - Default => TypeLog.All</see><br/>
+    /// <see cref="silentMode"> - Default => false</see><br/>
     /// </remarks>
     /// <example><code>var log = new Log(dir: "C:\\Users\\XD5965", name:"Log")</code></example>
-    public Log([Optional] string dir, string name = "Log", TypeLog typeLog = TypeLog.All)
+    public Log([Optional] string dir, string name = "Log", TypeLog typeLog = TypeLog.All, bool silentMode = false)
     {
         var directory = dir == "" ? Directory.GetCurrentDirectory() : dir;
         var folderName = Path.Join(directory, "logs");
@@ -156,6 +189,7 @@ public class Log
         Directory.CreateDirectory(folderName);
         FilePath = Path.Join(folderName, fileName);
         DefaultTypeLog = typeLog;
+        SilentMode = silentMode;
     }
     
     #endregion
