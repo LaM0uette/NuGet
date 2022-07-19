@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.Runtime.InteropServices;
+using System.Drawing;
 using Pastel;
 
 namespace Logger;
@@ -77,7 +78,12 @@ public class Log
     private string FilePath { get; }
 
     /// <summary>
-    /// Different types of log
+    /// Default log type
+    /// </summary>
+    private TypeLog DefaultTypeLog { get; }
+
+    /// <summary>
+    /// Different log types
     /// </summary>
     /// <example>
     /// <see cref="All"></see> => Print in console and write in log file<br/>
@@ -118,12 +124,14 @@ public class Log
     /// </summary>
     /// <param name="dir">Log file path</param>
     /// <param name="name">Log file name</param>
+    /// <param name="typeLog">Log type</param>
     /// <remarks>
     /// <see cref="dir"> - Default => <code>Directory.GetCurrentDirectory()</code></see><br/>
     /// <see cref="name"> - Default => "Log"</see><br/>
+    /// <see cref="typeLog"> - Default => TypeLog.All</see><br/>
     /// </remarks>
     /// <example><code>var log = new Log(dir: "C:\\Users\\XD5965", name:"Log")</code></example>
-    public Log(string dir = "", string name = "Log")
+    public Log([Optional] string dir, string name = "Log", TypeLog typeLog = TypeLog.All)
     {
         var directory = dir == "" ? Directory.GetCurrentDirectory() : dir;
         var folderName = Path.Join(directory, "logs");
@@ -131,6 +139,7 @@ public class Log
 
         Directory.CreateDirectory(folderName);
         FilePath = Path.Join(folderName, fileName);
+        DefaultTypeLog = typeLog;
     }
     
     #endregion
@@ -156,8 +165,10 @@ public class Log
     /// <param name="logFormat">String message formated for log file</param>
     /// <param name="typeLog"><see cref="TypeLog"></see> => Type of log</param>
     /// <param name="mode">Mode of print log in console<br/>0 for WriteLine<br/>1 for Write</param>
-    private void CheckTypeLog(string msgFormat = "", string logFormat = "", TypeLog typeLog = TypeLog.All, int mode = 0)
+    private void CheckTypeLog([Optional] string msgFormat, [Optional] string logFormat, TypeLog? typeLog, int mode = 0)
     {
+        typeLog ??= DefaultTypeLog;
+        
         switch (mode)
         {
             case 0:
@@ -177,7 +188,7 @@ public class Log
 
     #region Logging
 
-    public void Ok(string msg, TypeLog typeLog = TypeLog.All)
+    public void Ok(string msg, [Optional] TypeLog? typeLog)
     {
         var msgFormat = $"{$"{PrefixLog.Base} {PrefixLog.Ok}".Green()} {$"{msg}".Green()}";
         var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Ok} {msg}";
@@ -185,7 +196,7 @@ public class Log
         CheckTypeLog(msgFormat, logFormat, typeLog);
     }
 
-    public void Nok(string msg, TypeLog typeLog = TypeLog.All)
+    public void Nok(string msg, [Optional] TypeLog? typeLog)
     {
         var msgFormat = $"{$"{PrefixLog.Base} {PrefixLog.Nok}".Red()} {$"{msg}".Red()}";
         var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Nok} {msg}";
@@ -193,7 +204,7 @@ public class Log
         CheckTypeLog(msgFormat, logFormat, typeLog);
     }
 
-    public void Info(string msg, TypeLog typeLog = TypeLog.All)
+    public void Info(string msg, [Optional] TypeLog? typeLog)
     {
         var msgFormat = $"{$"{PrefixLog.Base} {PrefixLog.Info}".Blue()} {msg.Blue()}";
         var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Info} {msg}";
@@ -201,7 +212,7 @@ public class Log
         CheckTypeLog(msgFormat, logFormat, typeLog);
     }
 
-    public void Param(string msg, string value = "", TypeLog typeLog = TypeLog.All)
+    public void Param(string msg, [Optional] string value, [Optional] TypeLog? typeLog)
     {
         var msgFormat = $"{$"{PrefixLog.Base} {PrefixLog.Param}".Pink()} {$"{msg}".Pink()}{$"{value}".Blue()}";
         var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Param} {msg}{value}";
@@ -209,7 +220,7 @@ public class Log
         CheckTypeLog(msgFormat, logFormat, typeLog);
     }
     
-    public void Val(string msg, string value = "", TypeLog typeLog = TypeLog.All)
+    public void Val(string msg, [Optional] string value, [Optional] TypeLog? typeLog)
     {
         var msgFormat = $"{$"{PrefixLog.Base}".Green()} {$"{PrefixLog.Val[..5]}".BgGreen()}{$": {msg}".Green()}{$"{value}".Blue()}";
         var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Val} {msg}{value}";
@@ -217,7 +228,7 @@ public class Log
         CheckTypeLog(msgFormat, logFormat, typeLog);
     }
     
-    public void Err(string msg, TypeLog typeLog = TypeLog.All)
+    public void Err(string msg, [Optional] TypeLog? typeLog)
     {
         var msgFormat = $"{$"{PrefixLog.Base}".Red()} {$"{PrefixLog.Err[..5]}".BgRed()}{$": {msg}".Red()}";
         var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Err} {msg}";
@@ -225,7 +236,7 @@ public class Log
         CheckTypeLog(msgFormat, logFormat, typeLog);
     }
     
-    public void Crash(string msg, TypeLog typeLog = TypeLog.All)
+    public void Crash(string msg, [Optional] TypeLog? typeLog)
     {
         var msgFormat = $"{$"{PrefixLog.Base}".Red()} {$"{PrefixLog.Crash[..5]}".BgRed()}{$": {msg}".Red()}";
         var logFormat = $"[{DateTime.Now.ToLongTimeString()}] - {PrefixLog.Crash} {msg}";
@@ -234,47 +245,48 @@ public class Log
     }
     
     //
-    public void Progress(string msg, int v1, int v2, TypeLog typeLog = TypeLog.Cmd)
+    
+    public void Progress(string msg, int v1, int v2, TypeLog? typeLog = TypeLog.Cmd)
     {
         var msgFormat = $"\r{$"{msg}".Blue()} {$"{v1}".Green()}{"/".Blue()}{$"{v2}".Green()}";
 
         CheckTypeLog(msgFormat, typeLog: typeLog, mode: 1);
     }
     
-    public void Void(string msg, TypeLog typeLog = TypeLog.All)
+    public void Void([Optional] string msg, [Optional] TypeLog? typeLog)
     {
         CheckTypeLog(msg, msg, typeLog);
     }
     
-    public void VoidBlue(string msg, TypeLog typeLog = TypeLog.All)
+    public void VoidBlue([Optional] string msg, [Optional] TypeLog? typeLog)
     {
         var msgFormat = $"{msg}".Blue();
 
         CheckTypeLog(msgFormat, msg, typeLog);
     }
     
-    public void VoidGreen(string msg, TypeLog typeLog = TypeLog.All)
+    public void VoidGreen([Optional] string msg, [Optional] TypeLog? typeLog)
     {
         var msgFormat = $"{msg}".Green();
 
         CheckTypeLog(msgFormat, msg, typeLog);
     }
     
-    public void VoidRed(string msg, TypeLog typeLog = TypeLog.All)
+    public void VoidRed([Optional] string msg, [Optional] TypeLog? typeLog)
     {
         var msgFormat = $"{msg}".Red();
 
         CheckTypeLog(msgFormat, msg, typeLog);
     }
     
-    public void VoidPink(string msg, TypeLog typeLog = TypeLog.All)
+    public void VoidPink([Optional] string msg, [Optional] TypeLog? typeLog)
     {
         var msgFormat = $"{msg}".Pink();
 
         CheckTypeLog(msgFormat, msg, typeLog);
     }
     
-    public void Separator(string msg, TypeLog typeLog = TypeLog.All)
+    public void Separator([Optional] string msg, [Optional] TypeLog? typeLog)
     {
         var msgFormat = $"\n\n{$"{PrefixLog.Sep}".Gray()} {$"{msg}".Green()} {$"{PrefixLog.Sep}".Gray()}";
         var logFormat = $"\n\n{PrefixLog.Sep} {msg} {PrefixLog.Sep}";
@@ -283,14 +295,15 @@ public class Log
     }
     
     //
-    public void Category(string msg, TypeLog typeLog = TypeLog.All)
+    
+    public void Category(string msg, [Optional] TypeLog? typeLog)
     {
         var msgFormat = $"{msg}:".BgPink();
 
         CheckTypeLog(msgFormat, msg, typeLog);
     }
     
-    public void SubCategory(string title, string msg, TypeLog typeLog = TypeLog.All)
+    public void SubCategory(string title, string msg, [Optional] TypeLog? typeLog)
     {
         var msgFormat = $"   {$"{title}".Pink()}: {$"{msg}".Green()}";
         var logFormat = $"   {title}: {msg}";
@@ -298,7 +311,7 @@ public class Log
         CheckTypeLog(msgFormat, logFormat, typeLog);
     }
     
-    public void Description(string title, string msg, TypeLog typeLog = TypeLog.All)
+    public void Description(string title, string msg, [Optional] TypeLog? typeLog)
     {
         var msgFormat = $"{title}: {$"{msg}".Green()}";
         var logFormat = $"{title}: {msg}";

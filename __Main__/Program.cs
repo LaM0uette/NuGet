@@ -7,10 +7,8 @@ namespace __Main__
     {
         public static void Main()
         {
-            // TestLogger();
-            // TestDump();
-            
-            Console.WriteLine(TskWindows.GetGuid());
+            TestLogger();
+            TestDump();
 
             Console.ReadLine();
         }
@@ -44,7 +42,7 @@ namespace __Main__
 
             log.Separator("OK / NOK");
             log.Ok("Salut je suis un ok");
-            log.Ok("Salut je suis un ok", Log.TypeLog.Cmd);
+            log.Ok("Salut je suis un ok cmd", Log.TypeLog.Cmd);
             log.Nok("Salut je suis un nok");
             log.Nok("Salut je suis un nok", Log.TypeLog.Log);
 
@@ -72,6 +70,8 @@ namespace __Main__
                 log.Progress("Chargement", i + 1, 100);
                 Thread.Sleep(5);
             }
+            log.Void(typeLog: Log.TypeLog.Cmd);
+            log.Ok("Terminé !", Log.TypeLog.All);
 
             log.Separator("BILAN");
             log.Category("Titre de la categorie");

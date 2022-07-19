@@ -9,7 +9,7 @@
       "__Main__/1.0.0": {
         "dependencies": {
           "CommonTasks": "1.0.0",
-          "Logger": "1.0.1"
+          "Logger": "1.0.8"
         },
         "runtime": {
           "__Main__.dll": {}
@@ -28,8 +28,9 @@
           "CommonTasks.dll": {}
         }
       },
-      "Logger/1.0.1": {
+      "Logger/1.0.8": {
         "dependencies": {
+          "CommonTasks": "1.0.0",
           "Pastel": "3.0.1"
         },
         "runtime": {
@@ -56,7 +57,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Logger/1.0.1": {
+    "Logger/1.0.8": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
