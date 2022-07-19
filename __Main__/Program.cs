@@ -117,8 +117,15 @@ namespace __Main__
         ╚═╝     ╚═╝╚══════╝╚══════╝╚═════╝ ╚═╝╚═╝  ╚═╝";
             
             log.DrawStart(logo, author, version);
+            
+            log.Separator("INIT");
             log.Ok("test");
+            log.DrawParam("Poolsize mis sur", "5");
+            log.DrawParam("Poolsize mis sur", "5", "Test", "Autres test");
+            
+            
             log.DrawEnd(author, version);
+            
         }
 
         #endregion

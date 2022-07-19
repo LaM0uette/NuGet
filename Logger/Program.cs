@@ -83,7 +83,9 @@ public static class Draw
     #endregion
     
     //
-    
+
+    #region Func
+
     private static void MillisecondSleep(this int time)
     {
         Thread.Sleep(time);
@@ -93,7 +95,13 @@ public static class Draw
     {
         Thread.Sleep(time*1000);
     }
+
+    #endregion
     
+    //
+
+    #region Init
+
     public static void DrawStart(this Log log, string logo, string author, string version)
     {
         if (log.SilentMode) return;
@@ -116,6 +124,35 @@ public static class Draw
         log.DoubleSpace();
         
         1.SecondSleep();
+    }
+
+    #endregion
+    
+    //
+    
+    public static void DrawParam(this Log log, string msg, params string[] args)
+    {
+        if (log.SilentMode) return;
+
+        var msgArgs = "";
+
+        var i = 0;
+        foreach (var arg in args)
+        {
+            if (i == 0)
+            {
+                msgArgs += $" {arg}";
+            }
+            else
+            {
+                msgArgs += $" [{arg}]";
+            }
+            
+            i++;
+        }
+        
+        log.Param($"{msg}:", msgArgs);
+        300.MillisecondSleep();
     }
 }
 
