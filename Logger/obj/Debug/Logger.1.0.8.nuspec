@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Logger</id>
+    <version>1.0.8</version>
+    <title>Logger</title>
+    <authors>Logger</authors>
+    <icon>docs\log.png</icon>
+    <description>Gestion des logs automatisés</description>
+    <releaseNotes>Bug mineur et ajout des infos</releaseNotes>
+    <copyright>© 2022 - 2030 LaM0uette</copyright>
+    <tags>log, logger, logging</tags>
+    <repository type="Github" url="https://github.com/LaM0uette/NuGet" />
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="Pastel" version="3.0.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Prog\C#\NuGet\Logger\bin\Debug\net6.0\Logger.dll" target="lib\net6.0\Logger.dll" />
+    <file src="C:\Prog\C#\NuGet\Logger\docs\log.png" target="docs\log.png" />
+  </files>
+</package>
