@@ -116,6 +116,7 @@ namespace __Main__
             
             log.DrawStart(logo, "LaM0uette", "1.0.2");
             log.Ok("test");
+            log.DrawEnd("LaM0uette", "1.0.2");
         }
 
         #endregion

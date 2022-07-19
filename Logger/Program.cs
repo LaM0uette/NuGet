@@ -105,6 +105,18 @@ public static class Draw
         
         1.SecondSleep();
     }
+    
+    public static void DrawEnd(this Log log, string author, string version)
+    {
+        if (log.SilentMode) return;
+        
+        log.SeparatorLight();
+        log.Description($"{Constants.Author}", author);
+        log.Description($"{Constants.Version}", version);
+        log.DoubleSpace();
+        
+        1.SecondSleep();
+    }
 }
 
 #endregion
@@ -165,6 +177,7 @@ public class Log
         public const string Crash = "[CRA]:";
         
         public const string Sep = "■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■";
+        public const string SepLight = "+++++++++++++++++++++++++++++++++";
     }
     
     /// <summary>
@@ -341,6 +354,14 @@ public class Log
     {
         var msgFormat = $"\n\n{$"{PrefixLog.Sep}".Gray()} {$"{msg}".Green()} {$"{PrefixLog.Sep}".Gray()}";
         var logFormat = $"\n\n{PrefixLog.Sep} {msg} {PrefixLog.Sep}";
+
+        CheckTypeLog(msgFormat, logFormat, typeLog);
+    }
+    
+    public void SeparatorLight([Optional] string msg, [Optional] TypeLog? typeLog)
+    {
+        var msgFormat = $"\n\n{$"{PrefixLog.SepLight}".Gray()} {$"{msg}".Green()}";
+        var logFormat = $"\n\n{PrefixLog.SepLight} {msg}";
 
         CheckTypeLog(msgFormat, logFormat, typeLog);
     }
