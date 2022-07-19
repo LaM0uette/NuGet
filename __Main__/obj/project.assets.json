@@ -25,6 +25,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "CommonTasks": "1.0.0",
           "Pastel": "3.0.1"
         },
         "compile": {

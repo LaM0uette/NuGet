@@ -10,7 +10,7 @@ namespace __Main__
             // TestLogger();
             // TestDump();
             
-            Console.WriteLine(Windows.GetGuid());
+            Console.WriteLine(TskWindows.GetGuid());
 
             Console.ReadLine();
         }
