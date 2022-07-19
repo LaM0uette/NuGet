@@ -1,4 +1,5 @@
-﻿using Logger;
+﻿using CommonTasks;
+using Logger;
 
 namespace __Main__
 {
@@ -6,8 +7,10 @@ namespace __Main__
     {
         public static void Main()
         {
-            TestLogger();
-            TestDump();
+            // TestLogger();
+            // TestDump();
+            
+            Console.WriteLine(Windows.GetGuid());
 
             Console.ReadLine();
         }
