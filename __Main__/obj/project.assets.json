@@ -11,7 +11,7 @@
           "lib/net6.0/Pastel.dll": {}
         }
       },
-      "CommonTasks/1.0.0": {
+      "CommonTasks/1.0.1": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
@@ -21,11 +21,11 @@
           "bin/placeholder/CommonTasks.dll": {}
         }
       },
-      "Logger/1.0.8": {
+      "Logger/1.1.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "CommonTasks": "1.0.0",
+          "CommonTasks": "1.0.1",
           "Pastel": "3.0.1"
         },
         "compile": {
@@ -55,12 +55,12 @@
         "pastel.nuspec"
       ]
     },
-    "CommonTasks/1.0.0": {
+    "CommonTasks/1.0.1": {
       "type": "project",
       "path": "../CommonTasks/CommonTasks.csproj",
       "msbuildProject": "../CommonTasks/CommonTasks.csproj"
     },
-    "Logger/1.0.8": {
+    "Logger/1.1.0": {
       "type": "project",
       "path": "../Logger/Logger.csproj",
       "msbuildProject": "../Logger/Logger.csproj"
@@ -68,8 +68,8 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "CommonTasks >= 1.0.0",
-      "Logger >= 1.0.8"
+      "CommonTasks >= 1.0.1",
+      "Logger >= 1.1.0"
     ]
   },
   "packageFolders": {

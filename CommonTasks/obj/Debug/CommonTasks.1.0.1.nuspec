@@ -6,7 +6,6 @@
     <title>CommonTasks</title>
     <authors>CommonTasks</authors>
     <description>Fonctions générales à de multiples applications</description>
-    <releaseNotes>add getTimeStamp and rename class windows</releaseNotes>
     <copyright>© 2022 - 2030 LaM0uette</copyright>
     <tags>common task, task, windows</tags>
     <repository type="Github" url="https://github.com/LaM0uette/NuGet" />
