@@ -13,7 +13,7 @@
         <RepositoryUrl>https://github.com/LaM0uette/NuGet</RepositoryUrl>
         <RepositoryType>Github</RepositoryType>
         <PackageTags>log, logger, logging</PackageTags>
-        <PackageReleaseNotes>Bug mineur et ajout des infos</PackageReleaseNotes>
+        <PackageReleaseNotes></PackageReleaseNotes>
         <PackageVersion>1.0.8</PackageVersion>
     </PropertyGroup>
 

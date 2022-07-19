@@ -1,0 +1,12 @@
+C:\Prog\C#\NuGet\CommonTasks\bin\Debug\net6.0\CommonTasks.deps.json
+C:\Prog\C#\NuGet\CommonTasks\bin\Debug\net6.0\CommonTasks.dll
+C:\Prog\C#\NuGet\CommonTasks\bin\Debug\net6.0\CommonTasks.pdb
+C:\Prog\C#\NuGet\CommonTasks\obj\Debug\net6.0\CommonTasks.csproj.AssemblyReference.cache
+C:\Prog\C#\NuGet\CommonTasks\obj\Debug\net6.0\CommonTasks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Prog\C#\NuGet\CommonTasks\obj\Debug\net6.0\CommonTasks.AssemblyInfoInputs.cache
+C:\Prog\C#\NuGet\CommonTasks\obj\Debug\net6.0\CommonTasks.AssemblyInfo.cs
+C:\Prog\C#\NuGet\CommonTasks\obj\Debug\net6.0\CommonTasks.csproj.CoreCompileInputs.cache
+C:\Prog\C#\NuGet\CommonTasks\obj\Debug\net6.0\CommonTasks.dll
+C:\Prog\C#\NuGet\CommonTasks\obj\Debug\net6.0\refint\CommonTasks.dll
+C:\Prog\C#\NuGet\CommonTasks\obj\Debug\net6.0\CommonTasks.pdb
+C:\Prog\C#\NuGet\CommonTasks\obj\Debug\net6.0\ref\CommonTasks.dll
