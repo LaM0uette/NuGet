@@ -11,6 +11,8 @@
         <RepositoryUrl>https://github.com/LaM0uette/NuGet</RepositoryUrl>
         <PackageTags>common task, task, windows</PackageTags>
         <RepositoryType>Github</RepositoryType>
+        <PackageVersion>1.0.1</PackageVersion>
+        <PackageReleaseNotes>add getTimeStamp and rename class windows</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
