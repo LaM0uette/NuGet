@@ -7,8 +7,9 @@ namespace __Main__
     {
         public static void Main()
         {
-            TestLogger();
-            TestDump();
+            // TestLogger();
+            // TestDump();
+            TestDraw();
 
             Console.ReadLine();
         }
@@ -99,6 +100,13 @@ namespace __Main__
             dump3.StringList(lst);
             dump3.StringList(lst);
             dump3.StringList(lst);
+        }
+
+        private static void TestDraw()
+        {
+            var log = new Log();
+
+            log.DrawStart();
         }
 
         #endregion

@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Logger/1.0.0": {
         "dependencies": {
-          "CommonTasks": "1.0.0",
+          "CommonTasks": "1.0.1",
           "Pastel": "3.0.1"
         },
         "runtime": {
@@ -23,7 +23,7 @@
           }
         }
       },
-      "CommonTasks/1.0.0": {
+      "CommonTasks/1.0.1": {
         "runtime": {
           "CommonTasks.dll": {}
         }
@@ -43,7 +43,7 @@
       "path": "pastel/3.0.1",
       "hashPath": "pastel.3.0.1.nupkg.sha512"
     },
-    "CommonTasks/1.0.0": {
+    "CommonTasks/1.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

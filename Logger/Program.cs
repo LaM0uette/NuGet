@@ -4,6 +4,8 @@ using Pastel;
 
 namespace Logger;
 
+#region Static
+
 public static class Func
 {
     /// <summary>
@@ -67,6 +69,20 @@ public static class Rgb
 
     #endregion
 }
+
+public static class Draw
+{
+    public static void DrawStart(this Log log)
+    {
+        log.Ok("Test");
+        log.Ok("Test1");
+        log.Ok("Test2");
+    }
+}
+
+#endregion
+
+//
 
 public class Log
 {
@@ -377,3 +393,4 @@ public class Dump
 
     #endregion
 }
+
