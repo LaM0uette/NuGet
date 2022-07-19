@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "__Main__/1.0.0": {
         "dependencies": {
+          "CommonTasks": "1.0.0",
           "Logger": "1.0.1"
         },
         "runtime": {
@@ -20,6 +21,11 @@
             "assemblyVersion": "3.0.1.0",
             "fileVersion": "3.0.1.0"
           }
+        }
+      },
+      "CommonTasks/1.0.0": {
+        "runtime": {
+          "CommonTasks.dll": {}
         }
       },
       "Logger/1.0.1": {
@@ -44,6 +50,11 @@
       "sha512": "sha512-HlxB9PGDNKgwxxqiQ0wnYKt8XZ6sJ25vJ2jVnMZ7lYVDVeo1SZ/6RM9m4bvYwV6dFTfk+RoR3T2LV/oSVu6ZDw==",
       "path": "pastel/3.0.1",
       "hashPath": "pastel.3.0.1.nupkg.sha512"
+    },
+    "CommonTasks/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Logger/1.0.1": {
       "type": "project",

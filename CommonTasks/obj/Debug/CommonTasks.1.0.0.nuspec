@@ -5,12 +5,10 @@
     <version>1.0.0</version>
     <title>CommonTasks</title>
     <authors>CommonTasks</authors>
-    <icon>task.png</icon>
-    <projectUrl>https://github.com/LaM0uette/NuGet</projectUrl>
     <description>Fonctions générales à de multiples applications</description>
     <copyright>© 2022 - 2030 LaM0uette</copyright>
     <tags>common task, task, windows</tags>
-    <repository url="https://github.com/LaM0uette/NuGet" />
+    <repository type="Github" url="https://github.com/LaM0uette/NuGet" />
     <dependencies>
       <group targetFramework="net6.0" />
     </dependencies>

@@ -8,7 +8,6 @@
         <Description>Fonctions générales à de multiples applications</Description>
         <Copyright>© 2022 - 2030 LaM0uette</Copyright>
         <PackageProjectUrl></PackageProjectUrl>
-        <PackageIcon>task.png</PackageIcon>
         <RepositoryUrl>https://github.com/LaM0uette/NuGet</RepositoryUrl>
         <PackageTags>common task, task, windows</PackageTags>
         <RepositoryType>Github</RepositoryType>
