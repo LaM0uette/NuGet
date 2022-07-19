@@ -13,7 +13,7 @@
         <RepositoryUrl>https://github.com/LaM0uette/NuGet</RepositoryUrl>
         <RepositoryType>Github</RepositoryType>
         <PackageTags>log, logger, logging</PackageTags>
-        <PackageReleaseNotes>Ajout d'un type de log par défaut lors de l'appel du constructoeur</PackageReleaseNotes>
+        <PackageReleaseNotes>Ajout d un type de log par defaut lors de l appel du constructoeur</PackageReleaseNotes>
         <PackageVersion>1.1.0</PackageVersion>
     </PropertyGroup>
 
