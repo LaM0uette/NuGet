@@ -4,8 +4,6 @@ namespace Flaggers;
 
 public static class Flags
 {
-    // -b=1 -d 2
-
     #region Statements
 
     private const RegexOptions RegOption = RegexOptions.IgnoreCase;
@@ -62,6 +60,38 @@ public static class Flags
     }
 
     public static List<string> ListString(string name, List<string> value) => ListString("-", name, value);
+
+    #endregion
+    
+    //
+    
+    #region Int
+
+    public static int Int(string mode, string name, int value)
+    {
+        _regPattern = $"(?<={mode}{name}.).*?(?= |$)";
+
+        var match = Regex.Match(_args, _regPattern, RegOption);
+
+        return match.Success ? int.Parse(match.Value) : value;
+    }
+
+    public static int Int(string name, int value) => Int("-", name, value);
+    
+    public static List<int> ListInt(string mode, string name, List<int> value)
+    {
+        _regPattern = $"(?:(?<={mode}{name}.\\[|,)|(?<={mode}{name}.\\[|, ))\\d*(?=,.|\\] |\\]$)";
+
+        var listInt = new List<int>();
+        foreach (Match match in Regex.Matches(_args, _regPattern, RegOption))
+        {
+            listInt.Add(int.Parse(match.Value));
+        }
+        
+        return listInt.Count > 0 ? listInt : value;
+    }
+
+    public static List<int> ListInt(string name, List<int> value) => ListInt("-", name, value);
 
     #endregion
 }
