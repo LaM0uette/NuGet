@@ -9,7 +9,8 @@ namespace __Main__
         {
             // TestLogger();
             // TestDump();
-            TestDraw();
+            // TestDraw();
+            Console.WriteLine(string.Join(" ", Environment.GetCommandLineArgs()));
 
             Console.ReadLine();
         }
