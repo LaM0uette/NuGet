@@ -21,7 +21,7 @@
           "bin/placeholder/CommonTasks.dll": {}
         }
       },
-      "Logger/1.1.0": {
+      "Logger/1.2.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -60,7 +60,7 @@
       "path": "../CommonTasks/CommonTasks.csproj",
       "msbuildProject": "../CommonTasks/CommonTasks.csproj"
     },
-    "Logger/1.1.0": {
+    "Logger/1.2.0": {
       "type": "project",
       "path": "../Logger/Logger.csproj",
       "msbuildProject": "../Logger/Logger.csproj"
@@ -69,7 +69,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "CommonTasks >= 1.0.1",
-      "Logger >= 1.1.0"
+      "Logger >= 1.2.0"
     ]
   },
   "packageFolders": {
