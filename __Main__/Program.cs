@@ -10,7 +10,7 @@ namespace __Main__
             // TestLogger();
             // TestDump();
             // TestDraw();
-            Console.WriteLine(string.Join(" ", Environment.GetCommandLineArgs()));
+            TestArgCli();
 
             Console.ReadLine();
         }
@@ -130,5 +130,12 @@ namespace __Main__
         }
 
         #endregion
+        
+        //
+
+        private static void TestArgCli()
+        {
+            Console.WriteLine(string.Join(" ", Environment.GetCommandLineArgs()));
+        }
     }
 }
