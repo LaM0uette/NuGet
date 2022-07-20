@@ -65,6 +65,38 @@ public static class Flags
     
     //
     
+    #region Byte
+
+    public static byte Byte(string mode, string name, byte value)
+    {
+        _regPattern = $"(?<={mode}{name}.).*?(?= |$)";
+
+        var match = Regex.Match(_args, _regPattern, RegOption);
+
+        return match.Success ? byte.Parse(match.Value) : value;
+    }
+
+    public static byte Byte(string name, byte value) => Byte("-", name, value);
+    
+    public static List<byte> ListByte(string mode, string name, List<byte> value)
+    {
+        _regPattern = $"(?:(?<={mode}{name}.\\[|,)|(?<={mode}{name}.\\[|, ))\\d*(?=,.|\\] |\\]$)";
+
+        var listByte = new List<byte>();
+        foreach (Match match in Regex.Matches(_args, _regPattern, RegOption))
+        {
+            listByte.Add(byte.Parse(match.Value));
+        }
+        
+        return listByte.Count > 0 ? listByte : value;
+    }
+
+    public static List<byte> ListByte(string name, List<byte> value) => ListByte("-", name, value);
+
+    #endregion
+    
+    //
+    
     #region Int
 
     public static int Int(string mode, string name, int value)

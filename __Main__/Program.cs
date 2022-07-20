@@ -138,16 +138,22 @@ namespace __Main__
         {
             var flgBool = Flags.Bool("e", false);
             var flgStr = Flags.String("a", "Valide");
+            var flgByte = Flags.Byte("b", 0);
             var flgInt = Flags.Int("b", 0);
             var flgLstStr = Flags.ListString("i", new List<string>{"test1", "test2", "test3"});
+            var flgLstByte = Flags.ListByte("j", new List<byte>{5, 10, 15});
             var flgLstInt = Flags.ListInt("j", new List<int>{5, 10, 15});
             
             Console.WriteLine($"Bool: {flgBool}");
             Console.WriteLine($"String: {flgStr}");
+            Console.WriteLine($"Byte: {flgByte}");
             Console.WriteLine($"Int: {flgInt}");
 
             foreach (var str in flgLstStr)
                 Console.WriteLine($"ListString: {str}");
+            
+            foreach (var i in flgLstByte)
+                Console.WriteLine($"ListByte: {i}");
             
             foreach (var i in flgLstInt)
                 Console.WriteLine($"ListInt: {i}");
