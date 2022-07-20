@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Prog\\C#\\NuGet\\Flags\\Flags.csproj",
-      "projectName": "Flags",
-      "projectPath": "C:\\Prog\\C#\\NuGet\\Flags\\Flags.csproj",
+      "projectUniqueName": "C:\\Prog\\C#\\NuGet\\Flaggers\\Flaggers.csproj",
+      "projectName": "Flaggers",
+      "projectPath": "C:\\Prog\\C#\\NuGet\\Flaggers\\Flaggers.csproj",
       "packagesPath": "C:\\Users\\XD5965\\.nuget\\packages\\",
-      "outputPath": "C:\\Prog\\C#\\NuGet\\Flags\\obj\\",
+      "outputPath": "C:\\Prog\\C#\\NuGet\\Flaggers\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

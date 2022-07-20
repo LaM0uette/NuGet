@@ -1,0 +1,12 @@
+C:\Prog\C#\NuGet\Flaggers\bin\Debug\net6.0\Flaggers.deps.json
+C:\Prog\C#\NuGet\Flaggers\bin\Debug\net6.0\Flaggers.dll
+C:\Prog\C#\NuGet\Flaggers\bin\Debug\net6.0\Flaggers.pdb
+C:\Prog\C#\NuGet\Flaggers\obj\Debug\net6.0\Flaggers.csproj.AssemblyReference.cache
+C:\Prog\C#\NuGet\Flaggers\obj\Debug\net6.0\Flaggers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Prog\C#\NuGet\Flaggers\obj\Debug\net6.0\Flaggers.AssemblyInfoInputs.cache
+C:\Prog\C#\NuGet\Flaggers\obj\Debug\net6.0\Flaggers.AssemblyInfo.cs
+C:\Prog\C#\NuGet\Flaggers\obj\Debug\net6.0\Flaggers.csproj.CoreCompileInputs.cache
+C:\Prog\C#\NuGet\Flaggers\obj\Debug\net6.0\Flaggers.dll
+C:\Prog\C#\NuGet\Flaggers\obj\Debug\net6.0\refint\Flaggers.dll
+C:\Prog\C#\NuGet\Flaggers\obj\Debug\net6.0\Flaggers.pdb
+C:\Prog\C#\NuGet\Flaggers\obj\Debug\net6.0\ref\Flaggers.dll

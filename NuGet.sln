@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "__Main__", "__Main__\__Main
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonTasks", "CommonTasks\CommonTasks.csproj", "{04D36BE2-F2B1-443C-9936-533986044328}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flags", "Flags\Flags.csproj", "{C88FE516-FAB6-4046-BF8F-3B16D7F7E25A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flaggers", "Flaggers\Flaggers.csproj", "{C88FE516-FAB6-4046-BF8F-3B16D7F7E25A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -21,6 +21,16 @@
           "bin/placeholder/CommonTasks.dll": {}
         }
       },
+      "Flaggers/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Flaggers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Flaggers.dll": {}
+        }
+      },
       "Logger/1.2.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -60,6 +70,11 @@
       "path": "../CommonTasks/CommonTasks.csproj",
       "msbuildProject": "../CommonTasks/CommonTasks.csproj"
     },
+    "Flaggers/1.0.0": {
+      "type": "project",
+      "path": "../Flaggers/Flaggers.csproj",
+      "msbuildProject": "../Flaggers/Flaggers.csproj"
+    },
     "Logger/1.2.0": {
       "type": "project",
       "path": "../Logger/Logger.csproj",
@@ -69,6 +84,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "CommonTasks >= 1.0.1",
+      "Flaggers >= 1.0.0",
       "Logger >= 1.2.0"
     ]
   },
@@ -107,6 +123,9 @@
           "projectReferences": {
             "C:\\Prog\\C#\\NuGet\\CommonTasks\\CommonTasks.csproj": {
               "projectPath": "C:\\Prog\\C#\\NuGet\\CommonTasks\\CommonTasks.csproj"
+            },
+            "C:\\Prog\\C#\\NuGet\\Flaggers\\Flaggers.csproj": {
+              "projectPath": "C:\\Prog\\C#\\NuGet\\Flaggers\\Flaggers.csproj"
             },
             "C:\\Prog\\C#\\NuGet\\Logger\\Logger.csproj": {
               "projectPath": "C:\\Prog\\C#\\NuGet\\Logger\\Logger.csproj"

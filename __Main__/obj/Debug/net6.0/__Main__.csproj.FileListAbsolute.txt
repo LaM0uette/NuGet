@@ -19,3 +19,5 @@ C:\Prog\C#\NuGet\__Main__\bin\Debug\net6.0\Logger.pdb
 C:\Prog\C#\NuGet\__Main__\bin\Debug\net6.0\Pastel.dll
 C:\Prog\C#\NuGet\__Main__\bin\Debug\net6.0\CommonTasks.dll
 C:\Prog\C#\NuGet\__Main__\bin\Debug\net6.0\CommonTasks.pdb
+C:\Prog\C#\NuGet\__Main__\bin\Debug\net6.0\Flaggers.dll
+C:\Prog\C#\NuGet\__Main__\bin\Debug\net6.0\Flaggers.pdb

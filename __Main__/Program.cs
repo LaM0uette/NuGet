@@ -1,4 +1,5 @@
 ﻿using CommonTasks;
+using Flaggers;
 using Logger;
 
 namespace __Main__
@@ -135,7 +136,10 @@ namespace __Main__
 
         private static void TestArgCli()
         {
-            Console.WriteLine(string.Join(" ", Environment.GetCommandLineArgs()));
+            // FlgTest = Flaggers.Bool("--", "nom", "default", "sert à...")
+            
+            var flgTest = Flags.Bool("-", "e", "true", "Test");
+            Console.WriteLine(flgTest);
         }
     }
 }
