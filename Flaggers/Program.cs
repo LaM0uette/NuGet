@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace Flaggers;
 
@@ -28,38 +29,6 @@ public static class Flags
     }
 
     public static bool Bool(string name, bool value) => Bool("-", name, value);
-
-    #endregion
-    
-    //
-
-    #region String
-
-    public static string String(string mode, string name, string value)
-    {
-        _regPattern = $"(?<={mode}{name}.).*?(?= |$)";
-
-        var match = Regex.Match(_args, _regPattern, RegOption);
-
-        return match.Success ? match.Value : value;
-    }
-
-    public static string String(string name, string value) => String("-", name, value);
-    
-    public static List<string> ListString(string mode, string name, List<string> value)
-    {
-        _regPattern = $"(?:(?<={mode}{name}.\\[|,)|(?<={mode}{name}.\\[|, ))\\w*(?=,.|\\] |\\]$)";
-
-        var listStr = new List<string>();
-        foreach (Match match in Regex.Matches(_args, _regPattern, RegOption))
-        {
-            listStr.Add(match.Value);
-        }
-        
-        return listStr.Count > 0 ? listStr : value;
-    }
-
-    public static List<string> ListString(string name, List<string> value) => ListString("-", name, value);
 
     #endregion
     
@@ -124,6 +93,70 @@ public static class Flags
     }
 
     public static List<int> ListInt(string name, List<int> value) => ListInt("-", name, value);
+
+    #endregion
+    
+    //
+    
+    #region Float
+
+    public static float Float(string mode, string name, float value)
+    {
+        _regPattern = $"(?<={mode}{name}.).*?(?= |$)";
+
+        var match = Regex.Match(_args, _regPattern, RegOption);
+
+        return match.Success ? float.Parse(match.Value, CultureInfo.InvariantCulture) : value;
+    }
+
+    public static float Float(string name, float value) => Float("-", name, value);
+    
+    public static List<float> ListFloat(string mode, string name, List<float> value)
+    {
+        _regPattern = $"(?:(?<={mode}{name}.\\[|,)|(?<={mode}{name}.\\[|, ))\\d*\\.\\d*(?=,.|\\] |\\]$)";
+
+        var listFloat = new List<float>();
+        foreach (Match match in Regex.Matches(_args, _regPattern, RegOption))
+        {
+            listFloat.Add(float.Parse(match.Value, CultureInfo.InvariantCulture));
+        }
+        
+        return listFloat.Count > 0 ? listFloat : value;
+    }
+
+    public static List<float> ListFloat(string name, List<float> value) => ListFloat("-", name, value);
+
+    #endregion
+    
+    //
+
+    #region String
+
+    public static string String(string mode, string name, string value)
+    {
+        _regPattern = $"(?<={mode}{name}.).*?(?= |$)";
+
+        var match = Regex.Match(_args, _regPattern, RegOption);
+
+        return match.Success ? match.Value : value;
+    }
+
+    public static string String(string name, string value) => String("-", name, value);
+    
+    public static List<string> ListString(string mode, string name, List<string> value)
+    {
+        _regPattern = $"(?:(?<={mode}{name}.\\[|,)|(?<={mode}{name}.\\[|, ))\\w*(?=,.|\\] |\\]$)";
+
+        var listStr = new List<string>();
+        foreach (Match match in Regex.Matches(_args, _regPattern, RegOption))
+        {
+            listStr.Add(match.Value);
+        }
+        
+        return listStr.Count > 0 ? listStr : value;
+    }
+
+    public static List<string> ListString(string name, List<string> value) => ListString("-", name, value);
 
     #endregion
 }

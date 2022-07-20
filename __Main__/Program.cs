@@ -140,14 +140,17 @@ namespace __Main__
             var flgStr = Flags.String("a", "Valide");
             var flgByte = Flags.Byte("b", 0);
             var flgInt = Flags.Int("b", 0);
+            var flgFloat = Flags.Float("k", 1.1f);
             var flgLstStr = Flags.ListString("i", new List<string>{"test1", "test2", "test3"});
             var flgLstByte = Flags.ListByte("j", new List<byte>{5, 10, 15});
             var flgLstInt = Flags.ListInt("j", new List<int>{5, 10, 15});
+            var flgLstFloat = Flags.ListFloat("l", new List<float>{5.5f, 10.5f, 15.5f});
             
             Console.WriteLine($"Bool: {flgBool}");
             Console.WriteLine($"String: {flgStr}");
             Console.WriteLine($"Byte: {flgByte}");
             Console.WriteLine($"Int: {flgInt}");
+            Console.WriteLine($"Float: {flgFloat}");
 
             foreach (var str in flgLstStr)
                 Console.WriteLine($"ListString: {str}");
@@ -157,6 +160,9 @@ namespace __Main__
             
             foreach (var i in flgLstInt)
                 Console.WriteLine($"ListInt: {i}");
+            
+            foreach (var i in flgLstFloat)
+                Console.WriteLine($"ListFloat: {i}");
         }
     }
 }
