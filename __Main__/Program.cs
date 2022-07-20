@@ -136,9 +136,9 @@ namespace __Main__
 
         private static void TestArgCli()
         {
-            // FlgTest = Flaggers.Bool("--", "nom", "default", "sert à...")
+            // FlgTest = Flaggers.Bool("--", "nom", "default")
             
-            var flgTest = Flags.Bool("e", true, "Test");
+            var flgTest = Flags.Bool("e", false);
             
             Console.WriteLine(flgTest);
         }

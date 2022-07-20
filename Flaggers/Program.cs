@@ -20,17 +20,17 @@ public static class Flags
 
     #region Bool
 
-    public static bool Bool(string mode, string name, bool value, string description)
+    public static bool Bool(string mode, string name, bool value)
     {
-        _regPattern = $"(?<=-{name}.)(?:true|false)";
+        _regPattern = $"(?<={mode}{name}.)(?:true|false)";
 
         var match = Regex.Match(_args, _regPattern, RegOption);
 
-        return match.Success;
+        return match.Success ? !value : value;
     }
 
-    public static bool Bool(string name, bool value, string description) =>
-        Bool("-", name, value, description);
+    public static bool Bool(string name, bool value) =>
+        Bool("-", name, value);
 
     #endregion
 }
