@@ -138,7 +138,8 @@ namespace __Main__
         {
             // FlgTest = Flaggers.Bool("--", "nom", "default", "sert à...")
             
-            var flgTest = Flags.Bool("e", "true", "Test");
+            var flgTest = Flags.Bool("e", true, "Test");
+            
             Console.WriteLine(flgTest);
         }
     }
