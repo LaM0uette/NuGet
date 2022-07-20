@@ -47,6 +47,21 @@ public static class Flags
     }
 
     public static string String(string name, string value) => String("-", name, value);
+    
+    public static List<string> ListString(string mode, string name, List<string> value)
+    {
+        _regPattern = $"(?:(?<={mode}{name}.\\[|,)|(?<={mode}{name}.\\[|, ))\\w*(?=,.|\\] |\\]$)";
+
+        var listStr = new List<string>();
+        foreach (Match match in Regex.Matches(_args, _regPattern, RegOption))
+        {
+            listStr.Add(match.Value);
+        }
+        
+        return listStr.Count > 0 ? listStr : value;
+    }
+
+    public static List<string> ListString(string name, List<string> value) => ListString("-", name, value);
 
     #endregion
 }

@@ -138,9 +138,11 @@ namespace __Main__
         {
             var flgBool = Flags.Bool("e", false);
             var flgStr = Flags.String("a", "Valide");
+            var flgLstStr = Flags.ListString("i", new List<string>{"test1", "test2", "test3"});
             
             Console.WriteLine($"Bool: {flgBool}");
             Console.WriteLine($"String: {flgStr}");
+            Console.WriteLine($"String: {flgLstStr}");
         }
     }
 }
