@@ -139,8 +139,10 @@ namespace __Main__
             // FlgTest = Flaggers.Bool("--", "nom", "default")
             
             var flgTest = Flags.Bool("e", false);
+            var flgTest2 = Flags.Bool("@", "e", false);
             
             Console.WriteLine(flgTest);
+            Console.WriteLine(flgTest2);
         }
     }
 }
