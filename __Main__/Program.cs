@@ -142,7 +142,9 @@ namespace __Main__
             
             Console.WriteLine($"Bool: {flgBool}");
             Console.WriteLine($"String: {flgStr}");
-            Console.WriteLine($"String: {flgLstStr}");
+
+            foreach (var str in flgLstStr)
+                Console.WriteLine($"ListString: {str}");
         }
     }
 }
