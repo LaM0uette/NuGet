@@ -136,13 +136,13 @@ namespace __Main__
 
         private static void TestArgCli()
         {
-            // FlgTest = Flaggers.Bool("--", "nom", "default")
-            
             var flgTest = Flags.Bool("e", false);
             var flgTest2 = Flags.Bool("@", "e", false);
+            var flgTest3 = Flags.Bool("h", false);
             
             Console.WriteLine(flgTest);
             Console.WriteLine(flgTest2);
+            Console.WriteLine(flgTest3);
         }
     }
 }

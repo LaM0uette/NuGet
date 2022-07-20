@@ -22,7 +22,7 @@ public static class Flags
 
     public static bool Bool(string mode, string name, bool value)
     {
-        _regPattern = $"(?<={mode}{name}.)(?:true|false)";
+        _regPattern = $"(?:(?<={mode}{name}.)(?:true|false|t|f)|(?<= |^){mode}{name}(?=(?: |$)))";
 
         var match = Regex.Match(_args, _regPattern, RegOption);
 
