@@ -177,8 +177,8 @@ namespace __Main__
 
         private static void TestParser()
         {
+            // bool
             ulong b = 1;
-            
             var vBool = "true".ParseToBool();
             var vBool2 = b.ParseToBool();
             var vBool3 = 0.ParseToBool();
@@ -186,6 +186,12 @@ namespace __Main__
             Console.WriteLine($"Type: {vBool.GetType()}  |  Valeur: {vBool}\n");
             Console.WriteLine($"Type: {vBool2.GetType()}  |  Valeur: {vBool2}\n");
             Console.WriteLine($"Type: {vBool3.GetType()}  |  Valeur: {vBool3}\n");
+            
+            //
+            // str
+            var vStr = true.ParseToString();
+            
+            Console.WriteLine($"Type: {vStr.GetType()}  |  Valeur: {vStr}\n");
         }
 
         #endregion

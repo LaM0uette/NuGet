@@ -86,6 +86,12 @@ public static class Parse
     public static bool ParseToBool(this string value) => bool.TryParse(value, out _);
 
     #endregion
+
+    //
     
-    public static bool ParseToChar(this string str) => char.TryParse(str, out _);
+    #region String
+
+    public static string ParseToString(this bool value) => value.ToString();
+
+    #endregion
 }
