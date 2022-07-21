@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonTasks", "CommonTasks\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flaggers", "Flaggers\Flaggers.csproj", "{C88FE516-FAB6-4046-BF8F-3B16D7F7E25A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parser", "Parser\Parser.csproj", "{F9AC1F59-5624-4CB8-B054-F691398D9D4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{C88FE516-FAB6-4046-BF8F-3B16D7F7E25A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C88FE516-FAB6-4046-BF8F-3B16D7F7E25A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C88FE516-FAB6-4046-BF8F-3B16D7F7E25A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9AC1F59-5624-4CB8-B054-F691398D9D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9AC1F59-5624-4CB8-B054-F691398D9D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9AC1F59-5624-4CB8-B054-F691398D9D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9AC1F59-5624-4CB8-B054-F691398D9D4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

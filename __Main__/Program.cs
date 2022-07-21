@@ -12,6 +12,7 @@ namespace __Main__
             // TestDump();
             // TestDraw();
             // TestArgCli();
+            TestParser();
 
             Console.ReadLine();
         }
@@ -134,6 +135,8 @@ namespace __Main__
         
         //
 
+        #region Flaggers
+
         private static void TestArgCli()
         {
             var flgBool = Flags.Bool("e", false);
@@ -164,5 +167,18 @@ namespace __Main__
             foreach (var i in flgLstFloat)
                 Console.WriteLine($"ListFloat: {i}");
         }
+
+        #endregion
+        
+        //
+
+        #region Parser
+
+        private static void TestParser()
+        {
+            
+        }
+
+        #endregion
     }
 }

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Title>Parser</Title>
+        <Description>Parse les différent types de variable</Description>
+        <Copyright>© 2022 - 2030 LaM0uette</Copyright>
+        <RepositoryUrl>https://github.com/LaM0uette/NuGet</RepositoryUrl>
+        <RepositoryType>Github</RepositoryType>
+        <PackageTags>parse, parser, int, bool, byte, string</PackageTags>
+    </PropertyGroup>
+
+</Project>
