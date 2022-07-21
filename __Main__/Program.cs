@@ -177,7 +177,7 @@ namespace __Main__
 
         private static void TestParser()
         {
-            byte b = 1;
+            sbyte b = 1;
             
             var vBool = "true".ParseToBool();
             var vBool2 = b.ParseToBool();
