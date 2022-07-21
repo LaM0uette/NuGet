@@ -11,7 +11,7 @@ public static class Func
     /// <summary>
     /// Generate and return timestamp
     /// </summary>
-    /// <returns><see cref="string"></see> -> yyyy-MM-dd__HH-mm-ss</returns>
+    /// <returns><see cref="string"/> -> yyyy-MM-dd__HH-mm-ss</returns>
     /// <example>2022-07-18__11-37-20</example>
     public static string GetTimestamp() => DateTime.Now.ToString("yyyy-MM-dd__HH-mm-ss");
 }
