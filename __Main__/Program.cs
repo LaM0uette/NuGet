@@ -1,6 +1,7 @@
 ﻿using CommonTasks;
 using Flaggers;
 using Logger;
+using Parser;
 
 namespace __Main__
 {
@@ -176,7 +177,8 @@ namespace __Main__
 
         private static void TestParser()
         {
-            
+            var v = "true".ParseToBool();
+            Console.WriteLine($"Type: {v.GetType()}  |  Valeur: {v}");
         }
 
         #endregion

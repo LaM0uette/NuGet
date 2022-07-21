@@ -13,6 +13,7 @@
       <ProjectReference Include="..\CommonTasks\CommonTasks.csproj" />
       <ProjectReference Include="..\Flaggers\Flaggers.csproj" />
       <ProjectReference Include="..\Logger\Logger.csproj" />
+      <ProjectReference Include="..\Parser\Parser.csproj" />
     </ItemGroup>
 
 </Project>

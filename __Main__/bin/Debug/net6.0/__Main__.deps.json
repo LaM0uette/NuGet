@@ -10,7 +10,8 @@
         "dependencies": {
           "CommonTasks": "1.0.1",
           "Flaggers": "1.0.0",
-          "Logger": "1.2.0"
+          "Logger": "1.2.0",
+          "Parser": "1.0.0"
         },
         "runtime": {
           "__Main__.dll": {}
@@ -42,6 +43,11 @@
         "runtime": {
           "Logger.dll": {}
         }
+      },
+      "Parser/1.0.0": {
+        "runtime": {
+          "Parser.dll": {}
+        }
       }
     }
   },
@@ -69,6 +75,11 @@
       "sha512": ""
     },
     "Logger/1.2.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Parser/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

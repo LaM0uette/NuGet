@@ -44,6 +44,16 @@
         "runtime": {
           "bin/placeholder/Logger.dll": {}
         }
+      },
+      "Parser/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Parser.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Parser.dll": {}
+        }
       }
     }
   },
@@ -79,13 +89,19 @@
       "type": "project",
       "path": "../Logger/Logger.csproj",
       "msbuildProject": "../Logger/Logger.csproj"
+    },
+    "Parser/1.0.0": {
+      "type": "project",
+      "path": "../Parser/Parser.csproj",
+      "msbuildProject": "../Parser/Parser.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "CommonTasks >= 1.0.1",
       "Flaggers >= 1.0.0",
-      "Logger >= 1.2.0"
+      "Logger >= 1.2.0",
+      "Parser >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -129,6 +145,9 @@
             },
             "C:\\Prog\\C#\\NuGet\\Logger\\Logger.csproj": {
               "projectPath": "C:\\Prog\\C#\\NuGet\\Logger\\Logger.csproj"
+            },
+            "C:\\Prog\\C#\\NuGet\\Parser\\Parser.csproj": {
+              "projectPath": "C:\\Prog\\C#\\NuGet\\Parser\\Parser.csproj"
             }
           }
         }
