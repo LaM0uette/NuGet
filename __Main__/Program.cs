@@ -194,10 +194,14 @@ namespace __Main__
             var vStr = true.ParseToString(toLower: true);
             var vStr2 = f.ParseToString();
             var vStr3 = n.ParseToString();
+            var vStr4 = 21.ParseToString();
+            var vStr5 = 10.55.ParseToString();
             
             Console.WriteLine($"Type: {vStr.GetType()}  |  Valeur: {vStr}\n");
             Console.WriteLine($"Type: {vStr2.GetType()}  |  Valeur: {vStr2}\n");
             Console.WriteLine($"Type: {vStr3.GetType()}  |  Valeur: {vStr3}\n");
+            Console.WriteLine($"Type: {vStr4.GetType()}  |  Valeur: {vStr4}\n");
+            Console.WriteLine($"Type: {vStr5.GetType()}  |  Valeur: {vStr5}\n");
         }
 
         #endregion

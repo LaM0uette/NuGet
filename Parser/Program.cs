@@ -1,4 +1,6 @@
-﻿namespace Parser;
+﻿using System.Globalization;
+
+namespace Parser;
 
 public static class Parse
 {
@@ -174,6 +176,30 @@ public static class Parse
     /// <returns>Return a <see cref="string"/> value</returns>
     /// <example><code>var v = 1.ParseToString();</code>=> Return "1"</example>
     public static string ParseToString(this ulong value) => value.ToString();
+    
+    /// <summary>
+    /// Convert <see cref="float"/> to <see cref="string"/>
+    /// </summary>
+    /// <param name="value">A <see cref="float"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="string"/> value</returns>
+    /// <example><code>var v = 1.ParseToString();</code>=> Return "1"</example>
+    public static string ParseToString(this float value) => value.ToString(CultureInfo.InvariantCulture);
+    
+    /// <summary>
+    /// Convert <see cref="double"/> to <see cref="string"/>
+    /// </summary>
+    /// <param name="value">A <see cref="double"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="string"/> value</returns>
+    /// <example><code>var v = 1.ParseToString();</code>=> Return "1"</example>
+    public static string ParseToString(this double value) => value.ToString(CultureInfo.InvariantCulture);
+    
+    /// <summary>
+    /// Convert <see cref="decimal"/> to <see cref="string"/>
+    /// </summary>
+    /// <param name="value">A <see cref="decimal"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="string"/> value</returns>
+    /// <example><code>var v = 1.ParseToString();</code>=> Return "1"</example>
+    public static string ParseToString(this decimal value) => value.ToString(CultureInfo.InvariantCulture);
 
     #endregion
 }
