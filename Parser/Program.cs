@@ -114,11 +114,28 @@ public static class Parse
     /// Convert <see cref="float"/> to <see cref="int"/>
     /// </summary>
     /// <param name="value">A <see cref="float"/> containing the value to convert</param>
-    /// <returns>Return a <see cref="int"/> value (if is not convertible, the default value is 0)</returns>
+    /// <returns>Return a <see cref="int"/> value</returns>
+    /// <example><code>var v = 50.4f.ParseToInt();</code>=> Return 50<br/></example>
+    /// <example><code>var v = 50.6f.ParseToInt();</code>=> Return 51<br/></example>
+    public static int ParseToInt(this float value) => (int)Math.Round(value);
+    
+    /// <summary>
+    /// Convert <see cref="double"/> to <see cref="int"/>
+    /// </summary>
+    /// <param name="value">A <see cref="double"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="int"/> value</returns>
     /// <example><code>var v = 50.4.ParseToInt();</code>=> Return 50<br/></example>
     /// <example><code>var v = 50.6.ParseToInt();</code>=> Return 51<br/></example>
-    /// <example><code>var v = "A".ParseToInt();</code>=> Return 0</example>
-    public static int ParseToInt(this float value) => (int)Math.Round(value);
+    public static int ParseToInt(this double value) => (int)Math.Round(value);
+    
+    /// <summary>
+    /// Convert <see cref="decimal"/> to <see cref="int"/>
+    /// </summary>
+    /// <param name="value">A <see cref="decimal"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="int"/> value</returns>
+    /// <example><code>var v = 50.4.ParseToInt();</code>=> Return 50<br/></example>
+    /// <example><code>var v = 50.6.ParseToInt();</code>=> Return 51<br/></example>
+    public static int ParseToInt(this decimal value) => (int)Math.Round(value);
 
     #endregion
     
