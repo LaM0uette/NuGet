@@ -90,6 +90,56 @@ public static class Parse
     #endregion
 
     //
+    
+    #region Byte
+
+    /// <summary>
+    /// Convert <see cref="bool"/> to <see cref="int"/>
+    /// </summary>
+    /// <param name="value">A <see cref="bool"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="byte"/> value (0 false, 1 true)</returns>
+    /// <example><code>var v = false.ParseToInt();</code>=> Return 0</example>
+    public static byte ParseToByte(this bool value) => Convert.ToByte(value);
+    
+    /// <summary>
+    /// Convert <see cref="string"/> to <see cref="int"/>
+    /// </summary>
+    /// <param name="value">A <see cref="string"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="byte"/> value (if is not convertible, the default value is 0)</returns>
+    /// <example><code>var v = "50".ParseToInt();</code>=> Return 50<br/></example>
+    /// <example><code>var v = "A".ParseToInt();</code>=> Return 0</example>
+    public static byte ParseToByte(this string value) => byte.TryParse(value, out _) ? byte.Parse(value) : (byte)0;
+    
+    /// <summary>
+    /// Convert <see cref="float"/> to <see cref="int"/>
+    /// </summary>
+    /// <param name="value">A <see cref="float"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="byte"/> value</returns>
+    /// <example><code>var v = 50.4f.ParseToInt();</code>=> Return 50<br/></example>
+    /// <example><code>var v = 50.6f.ParseToInt();</code>=> Return 51<br/></example>
+    public static byte ParseToByte(this float value) => (byte)Math.Round(value);
+    
+    /// <summary>
+    /// Convert <see cref="double"/> to <see cref="int"/>
+    /// </summary>
+    /// <param name="value">A <see cref="double"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="byte"/> value</returns>
+    /// <example><code>var v = 50.4.ParseToInt();</code>=> Return 50<br/></example>
+    /// <example><code>var v = 50.6.ParseToInt();</code>=> Return 51<br/></example>
+    public static byte ParseToByte(this double value) => (byte)Math.Round(value);
+    
+    /// <summary>
+    /// Convert <see cref="decimal"/> to <see cref="int"/>
+    /// </summary>
+    /// <param name="value">A <see cref="decimal"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="byte"/> value</returns>
+    /// <example><code>var v = 50.4.ParseToInt();</code>=> Return 50<br/></example>
+    /// <example><code>var v = 50.6.ParseToInt();</code>=> Return 51<br/></example>
+    public static byte ParseToByte(this decimal value) => (byte)Math.Round(value);
+
+    #endregion
+    
+    //
 
     #region Int
 

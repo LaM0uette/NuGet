@@ -207,6 +207,21 @@ namespace __Main__
             
             //
             //int
+            var vByte = false.ParseToByte();
+            var vByte2 = "50".ParseToByte();
+            var vByte3 = 50.6f.ParseToByte();
+            var vByte4 = 50.4.ParseToByte();
+            var vByte5 = 50.6m.ParseToByte();
+            
+            Console.WriteLine("\n***** BYTE *****");
+            Console.WriteLine($"Type: {vByte.GetType()}  |  Valeur: {vByte}");
+            Console.WriteLine($"Type: {vByte2.GetType()}  |  Valeur: {vByte2}");
+            Console.WriteLine($"Type: {vByte3.GetType()}  |  Valeur: {vByte3}");
+            Console.WriteLine($"Type: {vByte4.GetType()}  |  Valeur: {vByte4}");
+            Console.WriteLine($"Type: {vByte5.GetType()}  |  Valeur: {vByte5}");
+            
+            //
+            //int
             var vInt = false.ParseToInt();
             var vInt2 = "50".ParseToInt();
             var vInt3 = 50.4f.ParseToInt();
