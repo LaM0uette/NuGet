@@ -190,6 +190,21 @@ public static class Parse
     #endregion
     
     //
+
+    #region Float
+
+    /// <summary>
+    /// Convert <see cref="string"/> to <see cref="float"/>
+    /// </summary>
+    /// <param name="value">A <see cref="string"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="float"/> value (if is not convertible, the default value is 0)</returns>
+    /// <example><code>var v = "50.5".ParseToInt();</code>=> Return 50.5<br/></example>
+    /// <example><code>var v = "A".ParseToInt();</code>=> Return 0f</example>
+    public static float ParseToFloat(this string value) => float.TryParse(value, out _) ? float.Parse(value) : 0f;
+
+    #endregion
+    
+    //
     
     #region String
 

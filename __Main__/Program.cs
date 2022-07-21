@@ -187,6 +187,43 @@ namespace __Main__
             Console.WriteLine($"Type: {vBool.GetType()}  |  Valeur: {vBool}");
             Console.WriteLine($"Type: {vBool2.GetType()}  |  Valeur: {vBool2}");
             Console.WriteLine($"Type: {vBool3.GetType()}  |  Valeur: {vBool3}");
+
+            //
+            // byte
+            var vByte = false.ParseToByte();
+            var vByte2 = "50".ParseToByte();
+            var vByte3 = 50.6f.ParseToByte();
+            var vByte4 = 50.4.ParseToByte();
+            var vByte5 = 50.6m.ParseToByte();
+            
+            Console.WriteLine("\n***** BYTE *****");
+            Console.WriteLine($"Type: {vByte.GetType()}  |  Valeur: {vByte}");
+            Console.WriteLine($"Type: {vByte2.GetType()}  |  Valeur: {vByte2}");
+            Console.WriteLine($"Type: {vByte3.GetType()}  |  Valeur: {vByte3}");
+            Console.WriteLine($"Type: {vByte4.GetType()}  |  Valeur: {vByte4}");
+            Console.WriteLine($"Type: {vByte5.GetType()}  |  Valeur: {vByte5}");
+            
+            //
+            // int
+            var vInt = false.ParseToInt();
+            var vInt2 = "50".ParseToInt();
+            var vInt3 = 50.4f.ParseToInt();
+            var vInt4 = 50.6.ParseToInt();
+            var vInt5 = 50.5m.ParseToInt();
+            
+            Console.WriteLine("\n***** INT *****");
+            Console.WriteLine($"Type: {vInt.GetType()}  |  Valeur: {vInt}");
+            Console.WriteLine($"Type: {vInt2.GetType()}  |  Valeur: {vInt2}");
+            Console.WriteLine($"Type: {vInt3.GetType()}  |  Valeur: {vInt3}");
+            Console.WriteLine($"Type: {vInt4.GetType()}  |  Valeur: {vInt4}");
+            Console.WriteLine($"Type: {vInt5.GetType()}  |  Valeur: {vInt5}");
+            
+            //
+            // float
+            var vFloat = "50.5".ParseToFloat();
+            
+            Console.WriteLine("\n***** FLOAT *****");
+            Console.WriteLine($"Type: {vFloat.GetType()}  |  Valeur: {vFloat}");
             
             //
             // str
@@ -204,36 +241,6 @@ namespace __Main__
             Console.WriteLine($"Type: {vStr3.GetType()}  |  Valeur: {vStr3}");
             Console.WriteLine($"Type: {vStr4.GetType()}  |  Valeur: {vStr4}");
             Console.WriteLine($"Type: {vStr5.GetType()}  |  Valeur: {vStr5}");
-            
-            //
-            //int
-            var vByte = false.ParseToByte();
-            var vByte2 = "50".ParseToByte();
-            var vByte3 = 50.6f.ParseToByte();
-            var vByte4 = 50.4.ParseToByte();
-            var vByte5 = 50.6m.ParseToByte();
-            
-            Console.WriteLine("\n***** BYTE *****");
-            Console.WriteLine($"Type: {vByte.GetType()}  |  Valeur: {vByte}");
-            Console.WriteLine($"Type: {vByte2.GetType()}  |  Valeur: {vByte2}");
-            Console.WriteLine($"Type: {vByte3.GetType()}  |  Valeur: {vByte3}");
-            Console.WriteLine($"Type: {vByte4.GetType()}  |  Valeur: {vByte4}");
-            Console.WriteLine($"Type: {vByte5.GetType()}  |  Valeur: {vByte5}");
-            
-            //
-            //int
-            var vInt = false.ParseToInt();
-            var vInt2 = "50".ParseToInt();
-            var vInt3 = 50.4f.ParseToInt();
-            var vInt4 = 50.6.ParseToInt();
-            var vInt5 = 50.5m.ParseToInt();
-            
-            Console.WriteLine("\n***** INT *****");
-            Console.WriteLine($"Type: {vInt.GetType()}  |  Valeur: {vInt}");
-            Console.WriteLine($"Type: {vInt2.GetType()}  |  Valeur: {vInt2}");
-            Console.WriteLine($"Type: {vInt3.GetType()}  |  Valeur: {vInt3}");
-            Console.WriteLine($"Type: {vInt4.GetType()}  |  Valeur: {vInt4}");
-            Console.WriteLine($"Type: {vInt5.GetType()}  |  Valeur: {vInt5}");
         }
 
         #endregion
