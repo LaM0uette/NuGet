@@ -189,7 +189,7 @@ namespace __Main__
             
             //
             // str
-            var vStr = true.ParseToString();
+            var vStr = true.ParseToString(toLower: true);
             
             Console.WriteLine($"Type: {vStr.GetType()}  |  Valeur: {vStr}\n");
         }

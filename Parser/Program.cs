@@ -91,7 +91,7 @@ public static class Parse
     
     #region String
 
-    public static string ParseToString(this bool value) => value.ToString();
+    public static string ParseToString(this bool value, bool toLower = false) => toLower ? value.ToString().ToLower() : value.ToString();
 
     #endregion
 }
