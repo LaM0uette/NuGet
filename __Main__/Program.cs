@@ -179,14 +179,17 @@ namespace __Main__
         {
             // bool
             ulong b = 1;
+            
             var vBool = "true".ParseToBool();
             var vBool2 = b.ParseToBool();
             var vBool3 = 0.ParseToBool();
+            var vBool4 = (-10).ParseToBool();
             
             Console.WriteLine("***** BOOL *****");
             Console.WriteLine($"Type: {vBool.GetType()}  |  Valeur: {vBool}");
             Console.WriteLine($"Type: {vBool2.GetType()}  |  Valeur: {vBool2}");
             Console.WriteLine($"Type: {vBool3.GetType()}  |  Valeur: {vBool3}");
+            Console.WriteLine($"Type: {vBool4.GetType()}  |  Valeur: {vBool4}");
 
             //
             // byte

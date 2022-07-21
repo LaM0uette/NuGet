@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Parser</id>
+    <version>1.0.0</version>
+    <title>Parser</title>
+    <authors>Parser</authors>
+    <description>Parse les différent types de variable</description>
+    <copyright>© 2022 - 2030 LaM0uette</copyright>
+    <tags>parse, parser, int, bool, byte, string</tags>
+    <repository type="Github" url="https://github.com/LaM0uette/NuGet" />
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Prog\C#\NuGet\Parser\bin\Debug\net6.0\Parser.dll" target="lib\net6.0\Parser.dll" />
+  </files>
+</package>
