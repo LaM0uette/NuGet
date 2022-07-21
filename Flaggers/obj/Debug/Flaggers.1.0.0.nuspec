@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Flaggers</id>
+    <version>1.0.0</version>
+    <title>Flaggers</title>
+    <authors>Flaggers</authors>
+    <description>Ajout de flag en cli</description>
+    <copyright>© 2022 - 2030 LaM0uette</copyright>
+    <tags>flag, flags, flagger, cli</tags>
+    <repository type="Github" url="https://github.com/LaM0uette/NuGet" />
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Prog\C#\NuGet\Flaggers\bin\Debug\net6.0\Flaggers.dll" target="lib\net6.0\Flaggers.dll" />
+  </files>
+</package>

@@ -4,6 +4,12 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Title>Flaggers</Title>
+        <Description>Ajout de flag en cli</Description>
+        <Copyright>© 2022 - 2030 LaM0uette</Copyright>
+        <RepositoryUrl>https://github.com/LaM0uette/NuGet</RepositoryUrl>
+        <RepositoryType>Github</RepositoryType>
+        <PackageTags>flag, flags, flagger, cli</PackageTags>
     </PropertyGroup>
 
 </Project>

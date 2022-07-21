@@ -11,7 +11,7 @@ namespace __Main__
             // TestLogger();
             // TestDump();
             // TestDraw();
-            TestArgCli();
+            // TestArgCli();
 
             Console.ReadLine();
         }

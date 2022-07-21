@@ -12,11 +12,14 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("Flaggers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyCopyrightAttribute("© 2022 - 2030 LaM0uette")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Ajout de flag en cli")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Flaggers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Flaggers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/LaM0uette/NuGet")]
 
 // Généré par la classe MSBuild WriteCodeFragment.
 
