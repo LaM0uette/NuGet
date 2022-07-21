@@ -189,9 +189,12 @@ namespace __Main__
             
             //
             // str
+            char f = 'É';
             var vStr = true.ParseToString(toLower: true);
+            var vStr2 = f.ParseToString();
             
             Console.WriteLine($"Type: {vStr.GetType()}  |  Valeur: {vStr}\n");
+            Console.WriteLine($"Type: {vStr2.GetType()}  |  Valeur: {vStr2}\n");
         }
 
         #endregion
