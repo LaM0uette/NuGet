@@ -177,11 +177,15 @@ namespace __Main__
 
         private static void TestParser()
         {
+            byte b = 1;
+            
             var vBool = "true".ParseToBool();
-            var vBool2 = 1.ParseToBool();
+            var vBool2 = b.ParseToBool();
+            var vBool3 = 0.ParseToBool();
             
             Console.WriteLine($"Type: {vBool.GetType()}  |  Valeur: {vBool}\n");
             Console.WriteLine($"Type: {vBool2.GetType()}  |  Valeur: {vBool2}\n");
+            Console.WriteLine($"Type: {vBool3.GetType()}  |  Valeur: {vBool3}\n");
         }
 
         #endregion
