@@ -91,6 +91,14 @@ public static class Parse
     
     #region String
 
+    /// <summary>
+    /// Convert <see cref="bool"/> to <see cref="string"/>
+    /// </summary>
+    /// <param name="value">A <see cref="bool"/> containing the value to convert</param>
+    /// <param name="toLower">A <see cref="bool"/> to enable converting <see cref="string"/> to lower<br/>(default value is false)</param>
+    /// <returns>Return a <see cref="string"/> value</returns>
+    /// <example><code>var v = true.ParseToString(toLower: true);</code>=> Return "True"<br/></example>
+    /// <example><code>var v = true.ParseToString();</code>=> Return "true"</example>
     public static string ParseToString(this bool value, bool toLower = false) => toLower ? value.ToString().ToLower() : value.ToString();
 
     #endregion
