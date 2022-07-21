@@ -23,6 +23,24 @@ public static class Parse
     public static bool ParseToBool(this byte value) => Convert.ToBoolean(value);
 
     /// <summary>
+    /// Convert <see cref="short"/> to <see cref="bool"/>
+    /// </summary>
+    /// <param name="value">A <see cref="short"/> containing the value to convert</param>
+    /// <returns>Return true or false</returns>
+    /// <example><code>var v = 1.ParseToBool();</code>=> Return True<br/></example>
+    /// <example><code>var v = 0.ParseToBool();</code>=> Return False</example>
+    public static bool ParseToBool(this short value) => Convert.ToBoolean(value);
+    
+    /// <summary>
+    /// Convert <see cref="ushort"/> to <see cref="bool"/>
+    /// </summary>
+    /// <param name="value">A <see cref="ushort"/> containing the value to convert</param>
+    /// <returns>Return true or false</returns>
+    /// <example><code>var v = 1.ParseToBool();</code>=> Return True<br/></example>
+    /// <example><code>var v = 0.ParseToBool();</code>=> Return False</example>
+    public static bool ParseToBool(this ushort value) => Convert.ToBoolean(value);
+    
+    /// <summary>
     /// Convert <see cref="int"/> to <see cref="bool"/>
     /// </summary>
     /// <param name="value">A <see cref="int"/> containing the value to convert</param>
@@ -30,6 +48,33 @@ public static class Parse
     /// <example><code>var v = 1.ParseToBool();</code>=> Return True<br/></example>
     /// <example><code>var v = 0.ParseToBool();</code>=> Return False</example>
     public static bool ParseToBool(this int value) => Convert.ToBoolean(value);
+    
+    /// <summary>
+    /// Convert <see cref="uint"/> to <see cref="bool"/>
+    /// </summary>
+    /// <param name="value">A <see cref="uint"/> containing the value to convert</param>
+    /// <returns>Return true or false</returns>
+    /// <example><code>var v = 1.ParseToBool();</code>=> Return True<br/></example>
+    /// <example><code>var v = 0.ParseToBool();</code>=> Return False</example>
+    public static bool ParseToBool(this uint value) => Convert.ToBoolean(value);
+    
+    /// <summary>
+    /// Convert <see cref="long"/> to <see cref="bool"/>
+    /// </summary>
+    /// <param name="value">A <see cref="long"/> containing the value to convert</param>
+    /// <returns>Return true or false</returns>
+    /// <example><code>var v = 1.ParseToBool();</code>=> Return True<br/></example>
+    /// <example><code>var v = 0.ParseToBool();</code>=> Return False</example>
+    public static bool ParseToBool(this long value) => Convert.ToBoolean(value);
+    
+    /// <summary>
+    /// Convert <see cref="ulong"/> to <see cref="bool"/>
+    /// </summary>
+    /// <param name="value">A <see cref="ulong"/> containing the value to convert</param>
+    /// <returns>Return true or false</returns>
+    /// <example><code>var v = 1.ParseToBool();</code>=> Return True<br/></example>
+    /// <example><code>var v = 0.ParseToBool();</code>=> Return False</example>
+    public static bool ParseToBool(this ulong value) => Convert.ToBoolean(value);
     
     /// <summary>
     /// Convert <see cref="string"/> to <see cref="bool"/>
