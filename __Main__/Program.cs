@@ -209,10 +209,12 @@ namespace __Main__
             //int
             var vInt = false.ParseToInt();
             var vInt2 = "50".ParseToInt();
+            var vInt3 = 50.6f.ParseToInt();
             
             Console.WriteLine("\n***** INT *****");
             Console.WriteLine($"Type: {vInt.GetType()}  |  Valeur: {vInt}");
             Console.WriteLine($"Type: {vInt2.GetType()}  |  Valeur: {vInt2}");
+            Console.WriteLine($"Type: {vInt3.GetType()}  |  Valeur: {vInt3}");
         }
 
         #endregion

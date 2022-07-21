@@ -109,6 +109,16 @@ public static class Parse
     /// <example><code>var v = "50".ParseToInt();</code>=> Return 50<br/></example>
     /// <example><code>var v = "A".ParseToInt();</code>=> Return 0</example>
     public static int ParseToInt(this string value) => int.TryParse(value, out _) ? int.Parse(value) : 0;
+    
+    /// <summary>
+    /// Convert <see cref="float"/> to <see cref="int"/>
+    /// </summary>
+    /// <param name="value">A <see cref="float"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="int"/> value (if is not convertible, the default value is 0)</returns>
+    /// <example><code>var v = 50.4.ParseToInt();</code>=> Return 50<br/></example>
+    /// <example><code>var v = 50.6.ParseToInt();</code>=> Return 51<br/></example>
+    /// <example><code>var v = "A".ParseToInt();</code>=> Return 0</example>
+    public static int ParseToInt(this float value) => (int)Math.Round(value);
 
     #endregion
     
