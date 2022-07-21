@@ -110,6 +110,70 @@ public static class Parse
     /// <example><code>var v = 'É'.ParseToString(toLower: true);</code>=> Return "É"<br/></example>
     /// <example><code>var v = 'É'.ParseToString();</code>=> Return "é"</example>
     public static string ParseToString(this char value, bool toLower = false) => toLower ? value.ToString().ToLower() : value.ToString();
+    
+    /// <summary>
+    /// Convert <see cref="sbyte"/> to <see cref="string"/>
+    /// </summary>
+    /// <param name="value">A <see cref="sbyte"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="string"/> value</returns>
+    /// <example><code>var v = 1.ParseToString();</code>=> Return "1"</example>
+    public static string ParseToString(this sbyte value) => value.ToString();
+    
+    /// <summary>
+    /// Convert <see cref="byte"/> to <see cref="string"/>
+    /// </summary>
+    /// <param name="value">A <see cref="byte"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="string"/> value</returns>
+    /// <example><code>var v = 1.ParseToString();</code>=> Return "1"</example>
+    public static string ParseToString(this byte value) => value.ToString();
+    
+    /// <summary>
+    /// Convert <see cref="short"/> to <see cref="string"/>
+    /// </summary>
+    /// <param name="value">A <see cref="short"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="string"/> value</returns>
+    /// <example><code>var v = 1.ParseToString();</code>=> Return "1"</example>
+    public static string ParseToString(this short value) => value.ToString();
+    
+    /// <summary>
+    /// Convert <see cref="ushort"/> to <see cref="string"/>
+    /// </summary>
+    /// <param name="value">A <see cref="ushort"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="string"/> value</returns>
+    /// <example><code>var v = 1.ParseToString();</code>=> Return "1"</example>
+    public static string ParseToString(this ushort value) => value.ToString();
+    
+    /// <summary>
+    /// Convert <see cref="int"/> to <see cref="string"/>
+    /// </summary>
+    /// <param name="value">A <see cref="int"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="string"/> value</returns>
+    /// <example><code>var v = 1.ParseToString();</code>=> Return "1"</example>
+    public static string ParseToString(this int value) => value.ToString();
+    
+    /// <summary>
+    /// Convert <see cref="uint"/> to <see cref="string"/>
+    /// </summary>
+    /// <param name="value">A <see cref="uint"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="string"/> value</returns>
+    /// <example><code>var v = 1.ParseToString();</code>=> Return "1"</example>
+    public static string ParseToString(this uint value) => value.ToString();
+    
+    /// <summary>
+    /// Convert <see cref="long"/> to <see cref="string"/>
+    /// </summary>
+    /// <param name="value">A <see cref="long"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="string"/> value</returns>
+    /// <example><code>var v = 1.ParseToString();</code>=> Return "1"</example>
+    public static string ParseToString(this long value) => value.ToString();
+    
+    /// <summary>
+    /// Convert <see cref="ulong"/> to <see cref="string"/>
+    /// </summary>
+    /// <param name="value">A <see cref="ulong"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="string"/> value</returns>
+    /// <example><code>var v = 1.ParseToString();</code>=> Return "1"</example>
+    public static string ParseToString(this ulong value) => value.ToString();
 
     #endregion
 }

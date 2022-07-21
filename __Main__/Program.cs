@@ -190,11 +190,14 @@ namespace __Main__
             //
             // str
             char f = 'É';
+            sbyte n = 1;
             var vStr = true.ParseToString(toLower: true);
             var vStr2 = f.ParseToString();
+            var vStr3 = n.ParseToString();
             
             Console.WriteLine($"Type: {vStr.GetType()}  |  Valeur: {vStr}\n");
             Console.WriteLine($"Type: {vStr2.GetType()}  |  Valeur: {vStr2}\n");
+            Console.WriteLine($"Type: {vStr3.GetType()}  |  Valeur: {vStr3}\n");
         }
 
         #endregion
