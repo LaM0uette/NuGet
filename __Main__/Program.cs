@@ -183,9 +183,10 @@ namespace __Main__
             var vBool2 = b.ParseToBool();
             var vBool3 = 0.ParseToBool();
             
-            Console.WriteLine($"Type: {vBool.GetType()}  |  Valeur: {vBool}\n");
-            Console.WriteLine($"Type: {vBool2.GetType()}  |  Valeur: {vBool2}\n");
-            Console.WriteLine($"Type: {vBool3.GetType()}  |  Valeur: {vBool3}\n");
+            Console.WriteLine("***** BOOL *****");
+            Console.WriteLine($"Type: {vBool.GetType()}  |  Valeur: {vBool}");
+            Console.WriteLine($"Type: {vBool2.GetType()}  |  Valeur: {vBool2}");
+            Console.WriteLine($"Type: {vBool3.GetType()}  |  Valeur: {vBool3}");
             
             //
             // str
@@ -197,11 +198,21 @@ namespace __Main__
             var vStr4 = 21.ParseToString();
             var vStr5 = 10.55.ParseToString();
             
-            Console.WriteLine($"Type: {vStr.GetType()}  |  Valeur: {vStr}\n");
-            Console.WriteLine($"Type: {vStr2.GetType()}  |  Valeur: {vStr2}\n");
-            Console.WriteLine($"Type: {vStr3.GetType()}  |  Valeur: {vStr3}\n");
-            Console.WriteLine($"Type: {vStr4.GetType()}  |  Valeur: {vStr4}\n");
-            Console.WriteLine($"Type: {vStr5.GetType()}  |  Valeur: {vStr5}\n");
+            Console.WriteLine("\n***** STRING *****");
+            Console.WriteLine($"Type: {vStr.GetType()}  |  Valeur: {vStr}");
+            Console.WriteLine($"Type: {vStr2.GetType()}  |  Valeur: {vStr2}");
+            Console.WriteLine($"Type: {vStr3.GetType()}  |  Valeur: {vStr3}");
+            Console.WriteLine($"Type: {vStr4.GetType()}  |  Valeur: {vStr4}");
+            Console.WriteLine($"Type: {vStr5.GetType()}  |  Valeur: {vStr5}");
+            
+            //
+            //int
+            var vInt = false.ParseToInt();
+            var vInt2 = "50".ParseToInt();
+            
+            Console.WriteLine("\n***** INT *****");
+            Console.WriteLine($"Type: {vInt.GetType()}  |  Valeur: {vInt}");
+            Console.WriteLine($"Type: {vInt2.GetType()}  |  Valeur: {vInt2}");
         }
 
         #endregion

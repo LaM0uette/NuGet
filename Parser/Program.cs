@@ -90,6 +90,29 @@ public static class Parse
     #endregion
 
     //
+
+    #region Int
+
+    /// <summary>
+    /// Convert <see cref="bool"/> to <see cref="int"/>
+    /// </summary>
+    /// <param name="value">A <see cref="bool"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="int"/> value (0 false, 1 true)</returns>
+    /// <example><code>var v = false.ParseToInt();</code>=> Return 0</example>
+    public static int ParseToInt(this bool value) => Convert.ToInt32(value);
+    
+    /// <summary>
+    /// Convert <see cref="string"/> to <see cref="int"/>
+    /// </summary>
+    /// <param name="value">A <see cref="string"/> containing the value to convert</param>
+    /// <returns>Return a <see cref="int"/> value (if is not convertible, the default value is 0)</returns>
+    /// <example><code>var v = "50".ParseToInt();</code>=> Return 50<br/></example>
+    /// <example><code>var v = "A".ParseToInt();</code>=> Return 0</example>
+    public static int ParseToInt(this string value) => int.TryParse(value, out _) ? int.Parse(value) : 0;
+
+    #endregion
+    
+    //
     
     #region String
 
