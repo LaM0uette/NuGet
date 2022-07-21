@@ -177,7 +177,7 @@ namespace __Main__
 
         private static void TestParser()
         {
-            var vBool = "truue".ParseToBool();
+            var vBool = "true".ParseToBool();
             
             Console.WriteLine($"Type: {vBool.GetType()}  |  Valeur: {vBool}\n\n");
         }
