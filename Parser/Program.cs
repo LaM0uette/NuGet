@@ -181,25 +181,31 @@ public static class Parse
     /// Convert <see cref="float"/> to <see cref="string"/>
     /// </summary>
     /// <param name="value">A <see cref="float"/> containing the value to convert</param>
+    /// <param name="invariant">A <see cref="bool"/> to enable invariant culture</param>
     /// <returns>Return a <see cref="string"/> value</returns>
     /// <example><code>var v = 1.ParseToString();</code>=> Return "1"</example>
-    public static string ParseToString(this float value) => value.ToString(CultureInfo.InvariantCulture);
+    public static string ParseToString(this float value, bool invariant = true) 
+        => invariant ? value.ToString(CultureInfo.InvariantCulture) : value.ToString(CultureInfo.CurrentCulture);
     
     /// <summary>
     /// Convert <see cref="double"/> to <see cref="string"/>
     /// </summary>
     /// <param name="value">A <see cref="double"/> containing the value to convert</param>
+    /// <param name="invariant">A <see cref="bool"/> to enable invariant culture</param>
     /// <returns>Return a <see cref="string"/> value</returns>
     /// <example><code>var v = 1.ParseToString();</code>=> Return "1"</example>
-    public static string ParseToString(this double value) => value.ToString(CultureInfo.InvariantCulture);
+    public static string ParseToString(this double value, bool invariant = true) 
+        => invariant ? value.ToString(CultureInfo.InvariantCulture) : value.ToString(CultureInfo.CurrentCulture);
     
     /// <summary>
     /// Convert <see cref="decimal"/> to <see cref="string"/>
     /// </summary>
     /// <param name="value">A <see cref="decimal"/> containing the value to convert</param>
+    /// <param name="invariant">A <see cref="bool"/> to enable invariant culture</param>
     /// <returns>Return a <see cref="string"/> value</returns>
     /// <example><code>var v = 1.ParseToString();</code>=> Return "1"</example>
-    public static string ParseToString(this decimal value) => value.ToString(CultureInfo.InvariantCulture);
+    public static string ParseToString(this decimal value, bool invariant = true) 
+        => invariant ? value.ToString(CultureInfo.InvariantCulture) : value.ToString(CultureInfo.CurrentCulture);
 
     #endregion
 }
