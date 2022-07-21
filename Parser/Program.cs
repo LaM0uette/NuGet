@@ -2,8 +2,8 @@
 
 public static class Parse
 {
-    public static bool ParseToBool(this string v)
+    public static bool ParseToBool(this string str)
     {
-        return bool.Parse(v);
+        return bool.TryParse(str, out _);
     }
 }
